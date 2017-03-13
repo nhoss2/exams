@@ -808,7 +808,7 @@ atcPreArea =
 atcBAK ::
   Exam
 atcBAK =
-  let q56to60PerformanceData = "*Using the following performance data:*\n  * Elevation: `1,890ft`\n  * Runways:\n    * `17/35 sealed TODA 3,000 metres (slope: level)`\n    * `12/30 short grass TODA 1,000 metres (slope: 1% down to SE)`\n  * ATIS\n    * `Terminal Information Delta`\n    * `Runway 12`\n    * `Wind: 150/15`\n    * `QNH 1,010\n    * Temperature: 15 degrees\n    * Cloud `FEW 3000`\n    * `Runway wet`\n    * `Works in progress Runway 17/35`\n\n"
+  let q56to60PerformanceData = "*Using the following performance data:*    * Elevation: `1,890ft`    * Runways:      * `17/35 sealed TODA 3,000 metres (slope: level)`      * `12/30 short grass TODA 1,000 metres (slope: 1% down to SE)`    * ATIS      * `Terminal Information Delta`      * `Runway 12`      * `Wind: 150/15`      * `QNH 1,010      * Temperature: 15 degrees      * Cloud `FEW 3000`      * `Runway wet`      * `Works in progress Runway 17/35`    "
   in  Exam
         "Aviation Theory Centre"
         (Just "Basic Aeronautical Knowledge")
@@ -1442,7 +1442,7 @@ atcBAK =
               "172kg."
             , "180kg."
             ]
-        , "Using Load System Charlie ![Load System Charlie](http://i.imgur.com/e4AEVb7.jpg), Given:\n\n  > EW 695kg\n  > IU 19.788\n  > The student pilot weighs 60kg and the instructor weighs 75kg\n\n  The maximum amount of fuel on board that will allow \"utility category\" operations immediately after take-off is closest to:" ~>
+        , "Using Load System Charlie ![Load System Charlie](http://i.imgur.com/e4AEVb7.jpg), Given:      > EW 695kg    > IU 19.788    > The student pilot weighs 60kg and the instructor weighs 75kg      The maximum amount of fuel on board that will allow \"utility category\" operations immediately after take-off is closest to:" ~>
           Multichoice
             [   
               "62 litres."       
@@ -1455,7 +1455,7 @@ atcBAK =
             [
               "135 litres."
             ]
-        , "Using Load System Charlie ![Load System Charlie](http://i.imgur.com/e4AEVb7.jpg), Given:\n\n  > EW 695kg\n  > IU 19.788\n  > The student pilot weighs 60kg and the instructor weighs 75kg\n  > Load the aircraft with 95kg weight of baggage and load 170 litres of fuel\n\n  The zero fuel weight conditions is closest to:" ~>
+        , "Using Load System Charlie ![Load System Charlie](http://i.imgur.com/e4AEVb7.jpg), Given:      > EW 695kg    > IU 19.788    > The student pilot weighs 60kg and the instructor weighs 75kg    > Load the aircraft with 95kg weight of baggage and load 170 litres of fuel      The zero fuel weight conditions is closest to:" ~>
           Multichoice
             [   
               "weight 824kg, arm 2,821mm."
@@ -1467,7 +1467,7 @@ atcBAK =
             [
               "weight 990kg, arm 3,004mm."
             ]
-        , "Using Load System Charlie ![Load System Charlie](http://i.imgur.com/e4AEVb7.jpg), Given:\n\n  > EW 695kg\n  > IU 19.788\n  > The student pilot weighs 60kg and the instructor weighs 75kg\n  > Load the aircraft with 95kg weight of baggage and load 170 litres of fuel\n\n  The take-off condition is closest to:" ~>
+        , "Using Load System Charlie ![Load System Charlie](http://i.imgur.com/e4AEVb7.jpg), Given:      > EW 695kg    > IU 19.788    > The student pilot weighs 60kg and the instructor weighs 75kg    > Load the aircraft with 95kg weight of baggage and load 170 litres of fuel      The take-off condition is closest to:" ~>
           Multichoice
             [   
               "weight 932kg, arm 2,960mm."
@@ -1480,7 +1480,7 @@ atcBAK =
             [
               "weight 1,012kg, arm 2,999mm."
             ]
-        , (q56to60PerformanceData <> "  The pressure altitude of this airfield is:\n") ~>
+        , (q56to60PerformanceData <> "  The pressure altitude of this airfield is:  ") ~>
           Multichoice
             [
               "1,800ft."              
@@ -1492,7 +1492,7 @@ atcBAK =
               "2,260ft."
             , "2,240ft."
             ]
-        , (q56to60PerformanceData <> "  The density altitude of this airfield is:\n") ~>
+        , (q56to60PerformanceData <> "  The density altitude of this airfield is:  ") ~>
           Multichoice
             [
               "1,800ft."
@@ -1504,7 +1504,7 @@ atcBAK =
 
             [
             ]
-        , (q56to60PerformanceData <> "  The headwind component on the duty runway is closest to:\n") ~>
+        , (q56to60PerformanceData <> "  The headwind component on the duty runway is closest to:  ") ~>
           Multichoice
             [
               "5kt."
@@ -1516,7 +1516,7 @@ atcBAK =
 
             [
             ]
-        , (q56to60PerformanceData <> "  Use the Cessna Landing chart ![Cessna Landing Chart](http://i.imgur.com/axGWoHJ.jpg) At the MTOW, the take-off distance required on Runway 12 is closest to:\n") ~>
+        , (q56to60PerformanceData <> "  Use the Cessna Landing chart ![Cessna Landing Chart](http://i.imgur.com/axGWoHJ.jpg) At the MTOW, the take-off distance required on Runway 12 is closest to:  ") ~>
           Multichoice
             [
               "550m."
@@ -1528,7 +1528,7 @@ atcBAK =
             [
               "980m."
             ]
-        , (q56to60PerformanceData <> "  Use the Piper Landing chart ![Piper Landing Chart](http://i.imgur.com/64t1Sju.jpg) Under the conditions given the landing distance required for this aircraft is closest to:\n") ~>
+        , (q56to60PerformanceData <> "  Use the Piper Landing chart ![Piper Landing Chart](http://i.imgur.com/64t1Sju.jpg) Under the conditions given the landing distance required for this aircraft is closest to:  ") ~>
           Multichoice
             [
               "310m."
@@ -1655,7 +1655,7 @@ taitPreSolo =
 
         [
         ]
-    , "List the radio calls that apply at your aerodrome for the situations below\n  * At the commencement of taxiing\n  * Before crossing the holding point\n  * Before take-off\n  * Downwind\n  * Base" ~>
+    , "List the radio calls that apply at your aerodrome for the situations below    * At the commencement of taxiing    * Before crossing the holding point    * Before take-off    * Downwind    * Base" ~>
       Multichoice
         [              
         ]
@@ -2010,7 +2010,7 @@ taitPreSolo =
 
         [
         ]
-    , "Find the following about your aircraft engine:\n  * What make or model is it?\n  * How many cylinders does it have?\n  * What is its capacity and rated power output?\n  * Does it have a carburettor or is it fuel injected?\n  * What is the recommended oil level before start-up?" ~>
+    , "Find the following about your aircraft engine:    * What make or model is it?    * How many cylinders does it have?    * What is its capacity and rated power output?    * Does it have a carburettor or is it fuel injected?    * What is the recommended oil level before start-up?" ~>
       Multichoice
         [              
         ]
@@ -2028,7 +2028,7 @@ taitPreSolo =
 
         [
         ]
-    , "What is the recommended procedure to adopt in the event of an engine fire?\n  * On the ground\n  * In flight" ~>
+    , "What is the recommended procedure to adopt in the event of an engine fire?    * On the ground    * In flight" ~>
       Multichoice
         [              
         ]
@@ -2037,7 +2037,7 @@ taitPreSolo =
 
         [
         ]
-    , "What is the recommended IAS for:\n  * Lift off\n  * Normal Climb\n  * Best Rate of Climb\n  * Normal Approach\n  * Flapless Approach\n  * Glide Approach\n  * Stall with flap\n  * Stall without flap" ~>
+    , "What is the recommended IAS for:    * Lift off    * Normal Climb    * Best Rate of Climb    * Normal Approach    * Flapless Approach    * Glide Approach    * Stall with flap    * Stall without flap" ~>
       Multichoice
         [              
         ]
@@ -2046,7 +2046,7 @@ taitPreSolo =
 
         [
         ]
-    , "What should you look for after start-up on the:\n  * Tachometer\n  * Oil Pressure Gauge\n  * Oil Temperature Gauge\n  * Vacuum Gauge\n  * Ammeter" ~>
+    , "What should you look for after start-up on the:    * Tachometer    * Oil Pressure Gauge    * Oil Temperature Gauge    * Vacuum Gauge    * Ammeter" ~>
       Multichoice
         [              
         ]
@@ -2654,7 +2654,7 @@ taitPreAreaSolo =
 
         [
         ]
-    , "State the IAS you would use for climb-out and approach at a short field\n  * Short field take-off climb-out speed\n  * Short field landing approach speed" ~>
+    , "State the IAS you would use for climb-out and approach at a short field    * Short field take-off climb-out speed    * Short field landing approach speed" ~>
       Multichoice
         [
         ]
@@ -2663,7 +2663,7 @@ taitPreAreaSolo =
 
         [
         ]
-    , "Answer the following questions with regard to the fuel system in your aeroplane.\n  * Does it have a carburettor or is it fuel-injected?\n  * Is the system gravity fed or is it pump fed?\n  * Would your fuel system continue to operate if the aeroplane were upside-down?" ~>
+    , "Answer the following questions with regard to the fuel system in your aeroplane.    * Does it have a carburettor or is it fuel-injected?    * Is the system gravity fed or is it pump fed?    * Would your fuel system continue to operate if the aeroplane were upside-down?" ~>
       Multichoice
         [
         ]
@@ -2672,7 +2672,7 @@ taitPreAreaSolo =
 
         [
         ]
-    , "[Electronics]\n  * What voltage is your electrical system?\n  * What indication would you have if the alternator failed in flight?\n  * What would you do if the alternator failed in flight?" ~>
+    , "[Electronics]    * What voltage is your electrical system?    * What indication would you have if the alternator failed in flight?    * What would you do if the alternator failed in flight?" ~>
       Multichoice
         [
         ]
@@ -2690,7 +2690,7 @@ taitPreAreaSolo =
 
         [
         ]
-    , "[Brakes]\n  * What would be the symptoms of air in the brake lines?\n  * A leak in the brake lines?" ~>
+    , "[Brakes]    * What would be the symptoms of air in the brake lines?    * A leak in the brake lines?" ~>
       Multichoice
         [
         ]
@@ -4391,7 +4391,7 @@ airborneAviationMeteorology =
         , "Dew point is 8C and fog is closer to forming at YBBB than YAAA"
         , "Wet bulb is 8C and fog is closer to forming at YBBB than YAAA"
         ]
-    , "A TAF includes the following:\n\n> INTER 0710/0714 2000 -SHSN\n\nThis forecasts, between the times indicated:" ~>
+    , "A TAF includes the following:    > INTER 0710/0714 2000 -SHSN    This forecasts, between the times indicated:" ~>
       Multichoice
         [
           "Showers and snow of expected duration 30 to 60 minutes"
@@ -4451,7 +4451,7 @@ airborneAviationMeteorology =
         [
           "200NM of the aircraft"
         ]
-    , "A TAF commences and finishes as follows:\n\n  > TAF YCOM 070635Z 0708/0720 ... Q 1020 1021 1019 1018\n\n  The forecast QNH for time 071320 is:" ~>
+    , "A TAF commences and finishes as follows:      > TAF YCOM 070635Z 0708/0720 ... Q 1020 1021 1019 1018      The forecast QNH for time 071320 is:" ~>
       Multichoice
         [
           "1020"
@@ -9210,7 +9210,7 @@ curtisPplTrial4 =
 
         [
         ]
-    , "Refer Figure 5 (page 8, Work Booklet). Given the following details:\n* Runway = 08/26\n* Take-off distance available = 1200 metres\n* Surface = short wet grass\n* Slope = level\n* Pressure height = 4000 ft\n* Wind = 080/05 kts\n* Temperature = +28 Degrees C\nThe heaviest take-off weight permitted under the conditions given is closest to: " ~>
+    , "Refer Figure 5 (page 8, Work Booklet). Given the following details:  * Runway = 08/26  * Take-off distance available = 1200 metres  * Surface = short wet grass  * Slope = level  * Pressure height = 4000 ft  * Wind = 080/05 kts  * Temperature = +28 Degrees C  The heaviest take-off weight permitted under the conditions given is closest to: " ~>
       Multichoice
         [
           "880 kg"
@@ -9330,7 +9330,7 @@ curtisPplTrial4 =
         , "072035 UTC"
         , "062107 UTC"
         ]
-    , "Given\n* Aerodrome elevation = 1500 ft\n* Cruise level = A065\n* Rate of Descent = 500 fpm\n* Ground Speed = 140 kts\n* Local QNH = area QNH\nTo arrive over the aerodrome at 1500 ft AGL the distance from the TOPD to your destination will be closest to:" ~>
+    , "Given  * Aerodrome elevation = 1500 ft  * Cruise level = A065  * Rate of Descent = 500 fpm  * Ground Speed = 140 kts  * Local QNH = area QNH  To arrive over the aerodrome at 1500 ft AGL the distance from the TOPD to your destination will be closest to:" ~>
       Multichoice
         [
           "13 nm"
@@ -9415,7 +9415,7 @@ curtisPplTrial4 =
         [
           "19 30S 146 52E"
         ]
-    , "Refer Loading System ALPHA (Page 10 and 11 Work Booklet). Given:\n* Aircraft basic index units = -190\n* Aircraft basic empty weight = 1018 kg\n* Row 1 – pilot and passenger = 200 kg\n* Row 2 – passenger, forward facing = 50 kg\n* Baggage rear compartment = 40 kg\n* Fuel = Full\nThe maximum weight of baggage, in Kg that may be carried in the nose compartment at take-off is closest to:" ~>
+    , "Refer Loading System ALPHA (Page 10 and 11 Work Booklet). Given:  * Aircraft basic index units = -190  * Aircraft basic empty weight = 1018 kg  * Row 1 – pilot and passenger = 200 kg  * Row 2 – passenger, forward facing = 50 kg  * Baggage rear compartment = 40 kg  * Fuel = Full  The maximum weight of baggage, in Kg that may be carried in the nose compartment at take-off is closest to:" ~>
       Multichoice
         [
         ]
@@ -9463,7 +9463,7 @@ curtisPplTrial4 =
 
         [
         ]
-    , "Given:\n* Area forecast W/V = 115/45\n* TR (T) = 150 Degrees\n* Variation = 10 Degrees East\n* TAS = 150 kts\nDetermine the approximate HDG (M) and GS:" ~>
+    , "Given:  * Area forecast W/V = 115/45  * TR (T) = 150 Degrees  * Variation = 10 Degrees East  * TAS = 150 kts  Determine the approximate HDG (M) and GS:" ~>
       Multichoice
         [
           "140 Degrees and 110 kt"
@@ -9524,7 +9524,7 @@ curtisPplTrial4 =
           "5 to 7 OKTAS"
         , "3 to 4 OKTAS"
         ]
-    , "Refer Loading System ALPHA (pages 10 and 11, Work booklet). Given:\n* Basic index units = -190\n* Basic empty weight = 1016 kg\n* Row 1 (pilot and passenger) = 160 kg\n* Row 2 (forward facing passengers) = 110 kg\n* Baggage (total weight) = 95 kg\n* Baggage will not fit in the rear compartment, so may be loaded in Row 3 or the nose compartment.\nThe maximum weight of fuel, in kg, that may be carried at take-off is closed to:" ~>
+    , "Refer Loading System ALPHA (pages 10 and 11, Work booklet). Given:  * Basic index units = -190  * Basic empty weight = 1016 kg  * Row 1 (pilot and passenger) = 160 kg  * Row 2 (forward facing passengers) = 110 kg  * Baggage (total weight) = 95 kg  * Baggage will not fit in the rear compartment, so may be loaded in Row 3 or the nose compartment.  The maximum weight of fuel, in kg, that may be carried at take-off is closed to:" ~>
       Multichoice
         [
           "210 kg"
@@ -9535,7 +9535,7 @@ curtisPplTrial4 =
         [
           "223 kg"
         ]
-    , "Refer Figure 5 (page 8, Work booklet). Given:\n* Runway = 05/23\n* Take-off distance available = 1200 metres\n* Surface = short dry grass\n* Slope = 2% down to the NE\n* Pressure height = 1000 feet\n* Wind = 230/05 kts\n* Temperature = +28oC\n* Take-off Weight = 1055 kg\nThe minimum take-off distance required under the conditions given is closest to:" ~>
+    , "Refer Figure 5 (page 8, Work booklet). Given:  * Runway = 05/23  * Take-off distance available = 1200 metres  * Surface = short dry grass  * Slope = 2% down to the NE  * Pressure height = 1000 feet  * Wind = 230/05 kts  * Temperature = +28oC  * Take-off Weight = 1055 kg  The minimum take-off distance required under the conditions given is closest to:" ~>
       Multichoice
         [
           "710 metres"
@@ -10204,7 +10204,7 @@ curtisPplTrial5 =
 
         [
         ]
-    , "Refer to Figure 4 (page 7, Work Booklet). Given the following details:\n* Runway = 15/33\n* Landing distance available = 1300 metres\n* Slope = 2% down to the SE\n* Pressure height = 3000 ft\n* Wind = 150/15 kts\n* Temperature = +20 Degrees C\nThe Landing distance required is closest to:" ~>
+    , "Refer to Figure 4 (page 7, Work Booklet). Given the following details:  * Runway = 15/33  * Landing distance available = 1300 metres  * Slope = 2% down to the SE  * Pressure height = 3000 ft  * Wind = 150/15 kts  * Temperature = +20 Degrees C  The Landing distance required is closest to:" ~>
       Multichoice
         [
           "720 metres"
@@ -10216,7 +10216,7 @@ curtisPplTrial5 =
 
         [
         ]
-    , "Refer to Figure 4 (page 7, Work Booklet). Given the following details:\n* Runway = 09/27\n* Landing distance available = 1400 metres\n* Slope = Level\n* Pressure height = 5000 ft\n* Wind = 270/10 kts\n* Temperature = +15 Degrees C\nThe landing distance required under the conditions given is closest to:" ~>
+    , "Refer to Figure 4 (page 7, Work Booklet). Given the following details:  * Runway = 09/27  * Landing distance available = 1400 metres  * Slope = Level  * Pressure height = 5000 ft  * Wind = 270/10 kts  * Temperature = +15 Degrees C  The landing distance required under the conditions given is closest to:" ~>
       Multichoice
         [
           "670 metres"
@@ -10228,7 +10228,7 @@ curtisPplTrial5 =
           "630 metres"
         , "700 metres"
         ]
-    , "Refer to loading system ALPHA (pages 10 and 11, Work Booklet). Given:\n* Basic index units = -190\n* Basic empty weight = 1016 kg\n* Row 1 (pilot and passenger) = 160 kg\n* Row (forward facing passengers) = 110 kg\n* Baggage (total weight) = 95 kg\n* Baggage will not fit in the rear compartment, so may be loaded in Row 3 or the nose compartment.\nThe maximum weight of fuel, in kg, that may be carried at take-off is closest to:" ~>
+    , "Refer to loading system ALPHA (pages 10 and 11, Work Booklet). Given:  * Basic index units = -190  * Basic empty weight = 1016 kg  * Row 1 (pilot and passenger) = 160 kg  * Row (forward facing passengers) = 110 kg  * Baggage (total weight) = 95 kg  * Baggage will not fit in the rear compartment, so may be loaded in Row 3 or the nose compartment.  The maximum weight of fuel, in kg, that may be carried at take-off is closest to:" ~>
       Multichoice
         [
         ]
@@ -10251,7 +10251,7 @@ curtisPplTrial5 =
         , "Percentage down-slope"
         , "Headwind component"
         ]
-    , "Refer to Figure 6 (page 9, Work Booklet). Given the following details:\n* Runway = 04/22\n* Landing distance available = 1100 metres\n* Slope = Level\n* Pressure height = 3000 ft\n* Wind = 220/05 kts\n* Temperature = +20 Degrees C\nThe landing distance required under the conditions given is closest to:" ~>
+    , "Refer to Figure 6 (page 9, Work Booklet). Given the following details:  * Runway = 04/22  * Landing distance available = 1100 metres  * Slope = Level  * Pressure height = 3000 ft  * Wind = 220/05 kts  * Temperature = +20 Degrees C  The landing distance required under the conditions given is closest to:" ~>
       Multichoice
         [
           "550 metres"
@@ -10263,7 +10263,7 @@ curtisPplTrial5 =
         [
           "500 metres"
         ]
-    , "Refer loading system BRAVO (pages 12 and 13, Work Booklet). Given:\n* Aircraft empty weight = 1265 lbs with a moment of 101.5\n* Oil = 15 lbs with a moment of 0.5\n* Pilot = 170 lbs\n* Co-pilot = 155 lbs\n* Fuel = 110 litres\n* Baggage = Maximum permitted\nThe maximum permitted weight of passengers in the rear seats is closest to:" ~>
+    , "Refer loading system BRAVO (pages 12 and 13, Work Booklet). Given:  * Aircraft empty weight = 1265 lbs with a moment of 101.5  * Oil = 15 lbs with a moment of 0.5  * Pilot = 170 lbs  * Co-pilot = 155 lbs  * Fuel = 110 litres  * Baggage = Maximum permitted  The maximum permitted weight of passengers in the rear seats is closest to:" ~>
       Multichoice
         [
           "402 lbs"
@@ -10274,7 +10274,7 @@ curtisPplTrial5 =
 
         [
         ]
-    , "Given:\n* Pressure height = 6000 feet\n* OAT = +20 degrees C\n* CAS = 120 kts\nDetermine the TAS:" ~>
+    , "Given:  * Pressure height = 6000 feet  * OAT = +20 degrees C  * CAS = 120 kts  Determine the TAS:" ~>
       Multichoice
         [
           "125 kts"
@@ -10359,7 +10359,7 @@ curtisPplTrial5 =
         [
           "365 nm"
         ]
-    , "Given:\n* Aerodrome elevation = 1500 feet\n* Cruise level = A065\n* Rate of descent = 500fpm\n* GS = 140 kts\n* Local QNH = Area QNH\nTo arrive over the aerodrome at 1500 feet AGL the distance from the TOPD to your destination will be closest to:" ~>
+    , "Given:  * Aerodrome elevation = 1500 feet  * Cruise level = A065  * Rate of descent = 500fpm  * GS = 140 kts  * Local QNH = Area QNH  To arrive over the aerodrome at 1500 feet AGL the distance from the TOPD to your destination will be closest to:" ~>
       Multichoice
         [
           "28 nm"
@@ -10371,7 +10371,7 @@ curtisPplTrial5 =
           "13 nm"
         , "21 nm"
         ]
-    , "Given the following conditions for planning a route segment:\n* W/V = 050/25 kts\n* TR (M) = 283\n* TAS = 125 kts\n* Magnetic Variation = 5 Degrees West\nThe HDG (M) and GS will be closest to:" ~>
+    , "Given the following conditions for planning a route segment:  * W/V = 050/25 kts  * TR (M) = 283  * TAS = 125 kts  * Magnetic Variation = 5 Degrees West  The HDG (M) and GS will be closest to:" ~>
       Multichoice
         [
           "273 (M), 138 kts"
@@ -10443,7 +10443,7 @@ curtisPplTrial5 =
 
         [
         ]
-    , "Given:\n* Pressure height = 9000 ft\n* Ambient temperature = -15 Degrees C\n* CAS = 170 kts\nThe TAS will be closest to:" ~>
+    , "Given:  * Pressure height = 9000 ft  * Ambient temperature = -15 Degrees C  * CAS = 170 kts  The TAS will be closest to:" ~>
       Multichoice
         [
         ]
@@ -10455,7 +10455,7 @@ curtisPplTrial5 =
         , "202 kts"
         , "152 kts"
         ]
-    , "Given:\n* W/V = 250(M)/30 kts\n* Runways available = 03/21 and 09/27\nWhich runway has the greatest headwind component for landing:" ~>
+    , "Given:  * W/V = 250(M)/30 kts  * Runways available = 03/21 and 09/27  Which runway has the greatest headwind component for landing:" ~>
       Multichoice
         [
           "21"
@@ -11114,7 +11114,7 @@ curtisPplTrial6 =
 
         [
         ]
-    , "Refer to Figure 3 (page 6, Work Booklet). Given the following details:\n* Runway = 05/23\n* Take-off distance available = 1300 metres\n* Surface = Long Wet Grass\n* Slope = Level\n* Pressure height = 3000 ft\n* Wind = 230/10 kts\n* Temperature = +15 Degrees C\n* Take-off Weight = 1055 kg\nThe Take-off distance required is closest to:" ~>
+    , "Refer to Figure 3 (page 6, Work Booklet). Given the following details:  * Runway = 05/23  * Take-off distance available = 1300 metres  * Surface = Long Wet Grass  * Slope = Level  * Pressure height = 3000 ft  * Wind = 230/10 kts  * Temperature = +15 Degrees C  * Take-off Weight = 1055 kg  The Take-off distance required is closest to:" ~>
       Multichoice
         [
         ]
@@ -11126,7 +11126,7 @@ curtisPplTrial6 =
         , "1180 metres"
         , "830 metres"
         ]
-    , "Refer to loading system CHARLIE (pages 14, 15 and 16, Work Booklet). Given:\n* Aircraft empty weight = 689 kg\n* Empty aircraft index units = 19522\n* Oil = 7 kg\n* Row 1 (pilot and passenger) = 110 kg\n* Baggage (baggage compartment) = 75 kg\n* Fuel (Litres) = 140 Lts\nThe maximum passenger weight, in kg, that may be carried in Row 2 at take-off is closest to:" ~>
+    , "Refer to loading system CHARLIE (pages 14, 15 and 16, Work Booklet). Given:  * Aircraft empty weight = 689 kg  * Empty aircraft index units = 19522  * Oil = 7 kg  * Row 1 (pilot and passenger) = 110 kg  * Baggage (baggage compartment) = 75 kg  * Fuel (Litres) = 140 Lts  The maximum passenger weight, in kg, that may be carried in Row 2 at take-off is closest to:" ~>
       Multichoice
         [
         ]
@@ -11138,7 +11138,7 @@ curtisPplTrial6 =
         , "135 kg"
         , "94 kg"
         ]
-    , "Refer to loading system ALPHA (pages 10 and 11, Work Booklet). Given:\n* Basic index units = -200\n* Basic empty weight = 1015 kg\n* Row 1 (pilot and passenger) = 160 kg\n* Row (forward facing passengers) = 145 kg\n* Nose baggage compartment = 45 kg\n* Rear baggage compartment = 45 kg\nThe maximum weight of fuel, in kg, that may be carried at take-off is closest to:" ~>
+    , "Refer to loading system ALPHA (pages 10 and 11, Work Booklet). Given:  * Basic index units = -200  * Basic empty weight = 1015 kg  * Row 1 (pilot and passenger) = 160 kg  * Row (forward facing passengers) = 145 kg  * Nose baggage compartment = 45 kg  * Rear baggage compartment = 45 kg  The maximum weight of fuel, in kg, that may be carried at take-off is closest to:" ~>
       Multichoice
         [
           "223 kg"
@@ -11149,7 +11149,7 @@ curtisPplTrial6 =
 
         [
         ]
-    , "Given:\n* Pressure height = 6000 feet\n* OAT = +20 degrees C\n* CAS = 120 kts\nDetermine the TAS:" ~>
+    , "Given:  * Pressure height = 6000 feet  * OAT = +20 degrees C  * CAS = 120 kts  Determine the TAS:" ~>
       Multichoice
         [
         ]
@@ -11856,3 +11856,150 @@ main =
                     [] -> markdownExams
                     (_:_) -> flashcardExams
      putStrLn (action exams)   
+
+quote ::
+  String
+  -> String
+quote s =
+  "\"" ++ concatMap (\c -> if c == '"' then "\\\"" else [c]) s ++ "\""
+
+newformatExam ::
+  Exam
+  -> String -- exam name
+  -> String
+newformatExam (Exam title _ _ q) n =
+  intercalate "\n" $
+    let r = zipWith (\x o -> (x, n ++ "_test" ++ (if o < 10 then ('0':) else id) (show o))) q [1..]
+    in  [
+          n ++ " ::"
+        , "  Exam TestMeta (ExamMeta String) (Blocks String)"
+        , n ++ " ="
+        , "  Exam"
+        , "    (examMetaTitle " ++ quote title ++ ")"
+        , "    (Tests"
+        , "      ["
+        , "        " ++ intercalate "\n      , " (map snd r)
+        , "      ]"
+        , "    )\n"
+        , intercalate "\n" (map (\(q', n') -> newformatQuestion q' n') r)
+        ]
+
+newformatQuestion ::
+  Question a
+  -> String -- question number
+  -> String
+newformatQuestion (Question q a _) n =
+  intercalate "\n"
+    [
+      n ++ " ::"
+    , "  Test TestMeta (Blocks String)"
+    , n ++ " ="
+    , "  str <$>"
+    , "    Test"
+    , "    (" ++ quote q ++ ")"
+    , newformatAnswer a
+    , "    Nothing"
+    , "    (rpl_meta ..~ notestmeta)\n"
+    ]
+
+newformatAnswer ::
+  Answer String
+  -> String
+newformatAnswer (DirectAnswer a) =
+  "    (_DirectAnswer # " ++ quote a ++ ")"
+newformatAnswer (DirectListAnswer a) =
+  intercalate "\n"
+    [
+      "    (_MultiAnswer #"
+    , "      ["
+    , "        " ++ intercalate "\n      , " (map quote a)
+    , "      ])"
+    ]
+newformatAnswer (Multichoice l x r) =
+  intercalate "\n"
+    [
+      "    (_Multichoice # (MultichoiceAnswer"
+    , "      ["
+    , "        " ++ intercalate "\n      , " (map quote l)
+    , "      ]\n"
+    , "      " ++ quote x ++ "\n"
+    , "      ["
+    , "        " ++ intercalate "\n      , " (map quote r)
+    , "      ]))"
+    ]
+
+newFormatExams =
+  [
+    {- (atcPreCircuit, "aviation_theory_centre_precircuit_solo")
+  , (atcPreArea, "aviation_theory_centre_prearea_solo")
+  , (atcBAK, "aviation_theory_centre_basic_aeronauticae_knowledge")
+  , (taitPreSolo, "bob_tait_precircuit_solo")
+  , -} (taitPreAreaSolo, "bob_tait_prearea_solo", "BobTaitPreAreaSolo")
+  , (airborneAviationPreSolo, "airborne_aviation_precircuit_solo", "AirborneAviationPreCircuitSolo")
+  , (airborneAviationAreaSolo, "airborne_aviation_prearea_solo", "AirborneAviationPreAreaSolo")
+  , (airborneAviationMeteorology, "airborne_aviation_Meteorology", "AirborneAviationMeterology")
+  , (taitPart13Meteorology, "bob_tait_part_13_Meteorology", "BobTaitPart13Meteorology")
+  , (atcFROL1, "aviation_theory_centre_flight_radio_operator_licence_1", "ATCFROL1")
+  , (atcFROL2, "aviation_theory_centre_flight_radio_operator_licence_2", "ATCFROL2")
+  , (atcFROL3, "aviation_theory_centre_flight_radio_operator_licence_3", "ATCFROL3")
+  , (atcFROL4, "aviation_theory_centre_flight_radio_operator_licence_4", "ATCFROL4")
+  , (atcFROL5, "aviation_theory_centre_flight_radio_operator_licence_5", "ATCFROL5")
+  , (atcFROL6, "aviation_theory_centre_flight_radio_operator_licence_6", "ATCFROL6")
+  , (atcFROL7, "aviation_theory_centre_flight_radio_operator_licence_7", "ATCFROL7")
+  , (atcFROL8, "aviation_theory_centre_flight_radio_operator_licence_8", "ATCFROL8")
+  , (atcFROL9, "aviation_theory_centre_flight_radio_operator_licence_9", "ATCFROL9")
+  , (frol, "flight_radio_operator_licence", "FROL")
+  , (flightOneFROL, "flight_one_flight_radio_operator_licence", "FlightOneFROL")
+  , (instruments, "instruments_selfmade", "InstrumentsSelfMade")
+  , (bobTaitChapterRevisionA1, "bob_tait_chapter_revision_A1", "BobTaitChapterRevisionA1")
+  , (bobTaitChapterRevisionA2, "bob_tait_chapter_revision_A2", "BobTaitChapterRevisionA2")
+  , (bobTaitChapterRevisionA3, "bob_tait_chapter_revision_A3", "BobTaitChapterRevisionA3")
+  , (bobTaitChapterRevisionA4, "bob_tait_chapter_revision_A4", "BobTaitChapterRevisionA4")
+  , (bobTaitChapterRevisionA5, "bob_tait_chapter_revision_A5", "BobTaitChapterRevisionA5")
+  , (bobTaitChapterRevisionA6, "bob_tait_chapter_revision_A6", "BobTaitChapterRevisionA6")
+  , (bobTaitChapterRevisionGK1, "bob_tait_chapter_revision_GK1", "BobTaitChapterRevisionGK1")
+  , (bobTaitChapterRevisionGK2, "bob_tait_chapter_revision_GK2", "BobTaitChapterRevisionGK2")
+  , (bobTaitChapterRevisionGK3, "bob_tait_chapter_revision_GK3", "BobTaitChapterRevisionGK3")
+  , (bobTaitChapterRevisionBAP, "bob_tait_chapter_revision_BAP", "BobTaitChapterRevisionBAP")
+  , (bobTaitChapterRevisionHPr1, "bob_tait_chapter_revision_HPr1", "BobTaitChapterRevisionHPr1")
+  , (bobTaitChapterRevisionHPr2, "bob_tait_chapter_revision_HPr2", "BobTaitChapterRevisionHPr2")
+  , (bobTaitChapterRevisionHPr3, "bob_tait_chapter_revision_HPr3", "BobTaitChapterRevisionHPr3")
+  , (bobTaitChapterRevisionHPr4, "bob_tait_chapter_revision_HPr4", "BobTaitChapterRevisionHPr4")
+  , (bobTaitChapterRevisionHPr5, "bob_tait_chapter_revision_HPr5", "BobTaitChapterRevisionHPr5")
+  , (bobTaitChapterRevisionHPr6, "bob_tait_chapter_revision_HPr6", "BobTaitChapterRevisionHPr6")
+  , (bobTaitChapterRevisionHPr7, "bob_tait_chapter_revision_HPr7", "BobTaitChapterRevisionHPr7")
+  , (bobTaitChapterRevisionHPr8, "bob_tait_chapter_revision_HPr8", "BobTaitChapterRevisionHPr8")
+  , (bobTaitChapterRevisionHPTEM, "bob_tait_chapter_revision_HPTEM", "BobTaitChapterRevisionHPTEM")
+  , (bobTaitChapterRevisionAirLaw, "bob_tait_chapter_revision_air_law", "BobTaitChapterRevisionAirLaw")
+  , (bobTaitChapterRevisionMeteorology, "bob_tait_chapter_revision_meteorology", "BobTaitChapterRevisionMeteorology")
+  , (airspeedindicatorExam, "air_speed_indicator_selfmade", "AirSpeedIndicatorSelfMade")
+  , (airspeedsExam, "air_speeds_selfmade", "AirSpeedsSelfMade")
+  , (c172Rairspeeds, "cessna_172R_air_speeds_selfmade", "Cessna172RAirSpeedsSelfMade")
+  , (c172Sairspeeds, "cessna_172S_air_Speeds_selfmade", "Cessna172SAirSpeedsSelfMade")
+  , (form61_1486_1495, "form_61_1486_61_1495_selfmade", "Form611486611495SelfMade")
+  , (curtisPplTrial4, "curtis_aviation_PPL_trial_4", "CurtisAviationPPLTrial4")
+  , (curtisPplTrial5, "curtis_aviation_PPL_trial_5", "CurtisAviationPPLTrial5")
+  , (curtisPplTrial6, "curtis_aviation_PPL_trial_6", "CurtisAviationPPLTrial6")
+  ]
+
+examstohs =
+  intercalate "\n"
+    (map (\(e, n, _) -> newformatExam e n) newFormatExams)
+
+writeexamshs =
+  let out = "/tmp/es"
+  -- in  writeFile "/tmp/x.hs" examstohs
+  in  mapM_ (\(e, n, f) -> writeFile (out ++ "/" ++ f ++ ".hs") (header f ++ newformatExam e n)) newFormatExams
+
+header s =
+  intercalate "\n"
+    [
+      "module Data.Document.Exams." ++ s ++ " where\n"
+    , "import Control.Lens(( # ))"
+    , "import Data.Document.AST"
+    , "import Data.Document.AviationExamMeta"
+    , "import Data.Document.ExamAST"
+    , "import Data.Functor((<$>))"
+    , "import Data.Maybe(Maybe(Nothing))"
+    , "import Data.String(String)\n\n"
+    ]
