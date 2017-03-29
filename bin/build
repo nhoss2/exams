@@ -7,4 +7,5 @@ DIRECTORY=gh-pages/exams
 mkdir -p $DIRECTORY
 
 cabal build && ./dist/build/exams/exams $DIRECTORY
+./bin/listdir gh-pages/exams
 

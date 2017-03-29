@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+DIRECTORY=$1
+
+if [ "$DIRECTORY" == "" ];
+then
+  echo enter output directory
+else
+  ls $1 |
+  perl -e 'print "<!doctype html><html lang=\"en\"><head><title>Aviation Practice Exams</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" /><link href=\"listdir.css\" type=\"text/css\" rel=\"stylesheet\"><link href=\"https://fonts.googleapis.com/css?family=Inconsolata:400,700\" type=\"text/css\" rel=\"stylesheet\"></head><body><div><ul>"; while(<>) { chop $_; print "<li><a href=\"./$_\">$_</a></li>";} print "</ul></div></body></html>"' > $1/index.html
+fi

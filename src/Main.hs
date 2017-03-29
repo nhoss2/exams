@@ -43,6 +43,7 @@ main =
               do  createDirectoryIfMissing True x
                   mapM_ (writeExam x) allexams
                   copyFile ("etc" </> "exams.css") (x </> "exams.css")
+                  copyFile ("etc" </> "listdir.css") (x </> "listdir.css")
                   writeFile (x </> "allexams.html") (htmlQuizExams (Exams allexams))
 
 examFilename ::
