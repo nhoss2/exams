@@ -1,0 +1,116 @@
+module Exams.AllExams(
+  allexams
+) where
+
+import Exams.AirborneAviationMeterology
+import Exams.AirborneAviationPreAreaSolo
+import Exams.AirborneAviationPreCircuitSolo
+import Exams.AirSpeedIndicatorSelfMade
+import Exams.AirSpeedsSelfMade
+import Exams.ATCBAK
+import Exams.ATCFROL1
+import Exams.ATCFROL2
+import Exams.ATCFROL3
+import Exams.ATCFROL4
+import Exams.ATCFROL5
+import Exams.ATCFROL6
+import Exams.ATCFROL7
+import Exams.ATCFROL8
+import Exams.ATCFROL9
+import Exams.ATCPreAreaSolo
+import Exams.ATCPreCircuitSolo
+import Exams.BobTaitChapterRevisionA1
+import Exams.BobTaitChapterRevisionA2
+import Exams.BobTaitChapterRevisionA3
+import Exams.BobTaitChapterRevisionA4
+import Exams.BobTaitChapterRevisionA5
+import Exams.BobTaitChapterRevisionA6
+import Exams.BobTaitChapterRevisionAirLaw
+import Exams.BobTaitChapterRevisionBAP
+import Exams.BobTaitChapterRevisionGK1
+import Exams.BobTaitChapterRevisionGK2
+import Exams.BobTaitChapterRevisionGK3
+import Exams.BobTaitChapterRevisionHPr1
+import Exams.BobTaitChapterRevisionHPr2
+import Exams.BobTaitChapterRevisionHPr3
+import Exams.BobTaitChapterRevisionHPr4
+import Exams.BobTaitChapterRevisionHPr5
+import Exams.BobTaitChapterRevisionHPr6
+import Exams.BobTaitChapterRevisionHPr7
+import Exams.BobTaitChapterRevisionHPr8
+import Exams.BobTaitChapterRevisionHPTEM
+import Exams.BobTaitChapterRevisionMeteorology
+import Exams.BobTaitPart13Meteorology
+import Exams.BobTaitPreAreaSolo
+import Exams.BobTaitPreCircuitSolo
+import Exams.Cessna172RAirSpeedsSelfMade
+import Exams.Cessna172SAirSpeedsSelfMade
+import Exams.CurtisAviationPPLTrial4
+import Exams.CurtisAviationPPLTrial5
+import Exams.CurtisAviationPPLTrial6
+import Exams.DysonHollandPPLSample1
+import Exams.FlightOneFROL
+import Exams.Form611486611495SelfMade
+import Exams.FROL
+import Exams.InstrumentsSelfMade
+import Data.String(String)
+import Document.AST(Blocks)
+import Document.AviationExamMeta(TestMeta)
+import Document.ExamAST(Exam, ExamMeta)
+
+allexams ::
+  [Exam TestMeta (ExamMeta String) (Blocks String)]
+allexams =
+  [
+    flight_one_flight_radio_operator_licence
+  , bob_tait_chapter_revision_HPr6
+  , bob_tait_chapter_revision_A2
+  , form_61_1486_61_1495_selfmade
+  , bob_tait_chapter_revision_BAP
+  , bob_tait_chapter_revision_HPr2
+  , bob_tait_chapter_revision_A5
+  , instruments_selfmade
+  , curtis_aviation_PPL_trial_5
+  , bob_tait_chapter_revision_A3
+  , flight_radio_operator_licence
+  , bob_tait_chapter_revision_GK1
+  , bob_tait_chapter_revision_HPTEM
+  , bob_tait_chapter_revision_HPr3
+  , bob_tait_chapter_revision_A4
+  , aviation_theory_centre_flight_radio_operator_licence_3
+  , bob_tait_part_13_Meteorology
+  , aviation_theory_centre_flight_radio_operator_licence_7
+  , bob_tait_chapter_revision_HPr5
+  , bob_tait_chapter_revision_HPr8
+  , airborne_aviation_Meteorology
+  , bob_tait_chapter_revision_A1
+  , aviation_theory_centre_flight_radio_operator_licence_2
+  , curtis_aviation_PPL_trial_4
+  , bob_tait_chapter_revision_A6
+  , bob_tait_prearea_solo
+  , aviation_theory_centre_precircuit_solo
+  , air_speeds_selfmade
+  , dyson_holland_ppl_sample_1
+  , bob_tait_chapter_revision_HPr7
+  , curtis_aviation_PPL_trial_6
+  , airborne_aviation_precircuit_solo
+  , bob_tait_chapter_revision_HPr1
+  , bob_tait_chapter_revision_HPr4
+  , aviation_theory_centre_flight_radio_operator_licence_8
+  , airborne_aviation_prearea_solo
+  , aviation_theory_centre_flight_radio_operator_licence_1
+  , air_speed_indicator_selfmade
+  , aviation_theory_centre_flight_radio_operator_licence_6
+  , aviation_theory_centre_prearea_solo
+  , aviation_theory_centre_flight_radio_operator_licence_5
+  , bob_tait_chapter_revision_GK2
+  , bob_tait_chapter_revision_air_law
+  , aviation_theory_centre_flight_radio_operator_licence_9
+  , cessna_172S_air_speeds_selfmade
+  , bob_tait_chapter_revision_GK3
+  , bob_tait_precircuit_solo
+  , aviation_theory_centre_flight_radio_operator_licence_4
+  , aviation_theory_centre_basic_aeronautical_knowledge
+  , bob_tait_chapter_revision_meteorology
+  , cessna_172R_air_speeds_selfmade
+  ]

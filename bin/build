@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+DIRECTORY=gh-pages/exams
+
+mkdir -p $DIRECTORY
+
+cabal build && ./dist/build/exams/exams $DIRECTORY
+

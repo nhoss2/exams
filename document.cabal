@@ -1,0 +1,159 @@
+name:               document
+version:            0.0.1
+license:            OtherLicense
+license-file:       LICENSE
+author:             Tony Morris <ʇǝu˙sıɹɹoɯʇ@ןןǝʞsɐɥ>
+maintainer:         Tony Morris
+copyright:          Copyright (C) 2017 Tony Morris
+synopsis:           Tools for writing technical documents
+category:           Data
+description:        Tools for writing technical documents
+homepage:           https://bitbucket.org/dibblego/document/
+bug-reports:        https://bitbucket.org/dibblego/document/issues/
+cabal-version:      >= 1.10
+build-type:         Custom
+extra-source-files: changelog
+
+source-repository   head
+  type:             git
+  location:         git@bitbucket.org:dibblego/document.git
+
+flag                small_base
+  description:      Choose the new, split-up base package.
+
+library
+  default-language:
+                    Haskell2010
+
+  build-depends:
+                    base < 5 && >= 4.8
+                    , lens
+                    , containers
+                    , mtl
+                    , filepath
+                    , directory
+                    , papa
+
+  ghc-options:
+                    -Wall
+
+  default-extensions:
+                    NoImplicitPrelude
+
+  hs-source-dirs:
+                    src
+
+  exposed-modules:
+                    Document
+                    Document.AST
+                    Document.AviationExamMeta
+                    Document.ExamAST
+                    Document.ExamBlocks
+                    Exams
+                    Exams.AirborneAviationMeterology
+                    Exams.AirborneAviationPreAreaSolo
+                    Exams.AirborneAviationPreCircuitSolo
+                    Exams.AirSpeedIndicatorSelfMade
+                    Exams.AirSpeedsSelfMade
+                    Exams.AllExams
+                    Exams.ATCBAK
+                    Exams.ATCFROL1
+                    Exams.ATCFROL2
+                    Exams.ATCFROL3
+                    Exams.ATCFROL4
+                    Exams.ATCFROL5
+                    Exams.ATCFROL6
+                    Exams.ATCFROL7
+                    Exams.ATCFROL8
+                    Exams.ATCFROL9
+                    Exams.ATCPreAreaSolo
+                    Exams.ATCPreCircuitSolo
+                    Exams.BobTaitChapterRevisionA1
+                    Exams.BobTaitChapterRevisionA2
+                    Exams.BobTaitChapterRevisionA3
+                    Exams.BobTaitChapterRevisionA4
+                    Exams.BobTaitChapterRevisionA5
+                    Exams.BobTaitChapterRevisionA6
+                    Exams.BobTaitChapterRevisionAirLaw
+                    Exams.BobTaitChapterRevisionBAP
+                    Exams.BobTaitChapterRevisionGK1
+                    Exams.BobTaitChapterRevisionGK2
+                    Exams.BobTaitChapterRevisionGK3
+                    Exams.BobTaitChapterRevisionHPr1
+                    Exams.BobTaitChapterRevisionHPr2
+                    Exams.BobTaitChapterRevisionHPr3
+                    Exams.BobTaitChapterRevisionHPr4
+                    Exams.BobTaitChapterRevisionHPr5
+                    Exams.BobTaitChapterRevisionHPr6
+                    Exams.BobTaitChapterRevisionHPr7
+                    Exams.BobTaitChapterRevisionHPr8
+                    Exams.BobTaitChapterRevisionHPTEM
+                    Exams.BobTaitChapterRevisionMeteorology
+                    Exams.BobTaitPart13Meteorology
+                    Exams.BobTaitPreAreaSolo
+                    Exams.BobTaitPreCircuitSolo
+                    Exams.Cessna172RAirSpeedsSelfMade
+                    Exams.Cessna172SAirSpeedsSelfMade
+                    Exams.CurtisAviationPPLTrial4
+                    Exams.CurtisAviationPPLTrial5
+                    Exams.CurtisAviationPPLTrial6
+                    Exams.DysonHollandPPLSample1
+                    Exams.FlightOneFROL
+                    Exams.Form611486611495SelfMade
+                    Exams.FROL
+                    Exams.InstrumentsSelfMade
+                    Output
+                    Output.HtmlQuiz
+                    Output.Indent
+                    Output.Markdown
+
+executable exams
+  default-language:
+                    Haskell2010
+
+  build-depends:
+                    base < 5 && >= 4.8
+                    , lens
+                    , containers
+                    , mtl
+                    , filepath
+                    , directory
+                    , papa
+
+  ghc-options:
+                    -Wall
+
+  default-extensions:
+                    NoImplicitPrelude
+
+  hs-source-dirs:
+                    src
+
+  main-is:
+                    Main.hs
+
+
+test-suite doctests
+  type:
+                    exitcode-stdio-1.0
+
+  main-is:
+                    doctests.hs
+
+  default-language:
+                    Haskell2010
+
+  build-depends:
+                    base < 5 && >= 3
+                    , doctest >= 0.9.7
+                    , filepath >= 1.3
+                    , directory >= 1.1
+                    , QuickCheck >= 2.0
+                    , template-haskell >= 2.8
+
+  ghc-options:
+                    -Wall
+                    -threaded
+
+  hs-source-dirs:
+                    test
