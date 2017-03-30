@@ -66,7 +66,7 @@ htmlQuizExam e@(Exam m@(ExamMeta tt st) (Tests t)) =
           tle
         , "<h4>Questions</h4>"
         , htmlTest htmlQuizTestQuestion
-        , "<hr></hr><hr></hr>"
+        , "<hr><hr>"
         , tle
         , "<h4>Answers</h4>"
         , htmlTest htmlQuizTestQuestionAnswer
@@ -328,7 +328,7 @@ htmlBlock ::
 htmlBlock (ParagraphBlock p) =
   htmlParagraph p
 htmlBlock HorizontalRule =
-  "<hr></hr>"
+  "<hr>"
 htmlBlock (ImageBlock i) =
   htmlImage i
 htmlBlock (HeadingBlock h) =
@@ -402,11 +402,15 @@ htmlImage ::
 htmlImage (Image tx t) =
   concat
     [
-      "<img src=\""
+      "<a href=\""
     , t
-    , "\" alt=\""
+    , "\">\n"
+    , "<img src=\""
+    , t
+    , "\" style=\"width: 20%; height: 20%;\" alt=\""
     , tx
     , "\">\n"
+    , "</a>"
     ]
 
 htmlHeading ::
