@@ -152,7 +152,7 @@ Flight notification for a local (brief duration) VFR flight intending to operate
 
 extract of ARMIDALE WAC (3357)
 
-![extract of ARMIDALE WAC (3357)](https://i.imgur.com/oOmoGzT.png)
+![extract of ARMIDALE WAC (3357)](https://i.imgur.com/8fpyzO1.png)
 What is the latitude and longitude of BINNAWAY (just south of Coonabarabran)?
 
 * 31°33'S 149°23'E
@@ -167,7 +167,7 @@ What is the latitude and longitude of BINNAWAY (just south of Coonabarabran)?
 
 extract of ARMIDALE WAC (3357)
 
-![extract of ARMIDALE WAC (3357)](https://i.imgur.com/oOmoGzT.png)
+![extract of ARMIDALE WAC (3357)](https://i.imgur.com/8fpyzO1.png)
 On a direct flight from Narrabri -- YNBR (30°19'S 149°50'E) to Walgett -- YWLG (30°02'S 148°07E), departing YNBR at 0300 UTC, a pinpoint is obtained at Merah North at 0316 UTC after maintaining a constant heading from departure. In order to regain track required abeam Bugilbone, the heading must be altered
 
 * 5° left
@@ -182,7 +182,7 @@ On a direct flight from Narrabri -- YNBR (30°19'S 149°50'E) to Walgett -- YWLG
 
 extract of ARMIDALE WAC (3357)
 
-![extract of ARMIDALE WAC (3357)](https://i.imgur.com/oOmoGzT.png)
+![extract of ARMIDALE WAC (3357)](https://i.imgur.com/8fpyzO1.png)
 On a direct flight from Narrabri -- YNBR (30°19'S 149°50'E) to Walgett -- YWLG (30°02'S 148°07E), which of the following features will provide the best ground speed check
 
 * The railway from Burren Junction to Bugilbone homestead.
@@ -197,7 +197,7 @@ On a direct flight from Narrabri -- YNBR (30°19'S 149°50'E) to Walgett -- YWLG
 
 extract of ROCKHAMPTON WAC (3235)
 
-![extract of ROCKHAMPTON WAC (3235)](https://i.imgur.com/IDTPNDj.png)
+![extract of ROCKHAMPTON WAC (3235)](https://i.imgur.com/I31CHbW.png)
 A VFR flight derparts Moranbah -- YMRB (22°04'S 148°05'E) at 2300 UTC for a direct flight to Collinsville -- YCSV (20°36'S 147°51'E), estimating YCSV at 2346 UTC. At 2314 UTC, a pinpoint is obtained over the 1761 ft spot height called Boveys Lookout. The ETA for YCSV is now
 
 * 4 min later than originally planned.
@@ -212,7 +212,7 @@ A VFR flight derparts Moranbah -- YMRB (22°04'S 148°05'E) at 2300 UTC for a di
 
 extract of ROCKHAMPTON WAC (3235)
 
-![extract of ROCKHAMPTON WAC (3235)](https://i.imgur.com/IDTPNDj.png)
+![extract of ROCKHAMPTON WAC (3235)](https://i.imgur.com/I31CHbW.png)
 A VFR flight departs Moranbah -- YMRB (22°04'S 148°05'E) at 2300 UTC for a direct flight to Collinsville -- YCSV (20°36'S 147°51'E), estimating YCSV at 2346 UTC. At 2314 UTC, a pinpoint is obtained over the 1761 ft spot height called Boveys Lookout. You estimate the track error to be 6° RIGHT and alter heading 12° left. You estimate being back on track at _____ UTC.
 
 2328 UTC
@@ -221,7 +221,7 @@ A VFR flight departs Moranbah -- YMRB (22°04'S 148°05'E) at 2300 UTC for a dir
 
 extract of ROCKHAMPTON WAC (3235)
 
-![extract of ROCKHAMPTON WAC (3235)](https://i.imgur.com/IDTPNDj.png)
+![extract of ROCKHAMPTON WAC (3235)](https://i.imgur.com/I31CHbW.png)
 The latitude of the feature bearing 208°/14nm from Proserpine -- YBPN, is
 
 * 20°42'S
@@ -440,7 +440,8 @@ An aircraft's heading is 320M and the relative bearing of an aerodrome from the 
 
 Piper `Romeo` loading system
 
-![Piper `Romeo` loading system](https://i.imgur.com/RVtYDpF.png)
+![Piper `Romeo` loading system (1)](https://i.imgur.com/W3E5zTb.png)
+![Piper `Romeo` loading system (2)](https://i.imgur.com/TmVLbvT.png)
 Given:
 
 * Basic index units = -300
@@ -469,7 +470,8 @@ Assuming no performance limits, the maximum fuel at takeoff is
 
 Cessna `Papa` loading system
 
-![Cessna `Papa` loading system](https://i.imgur.com/3Hh7QYJ.png)
+![Cessna `Papa` loading system (1)](https://i.imgur.com/WHmo0K1.png)
+![Cessna `Papa` loading system (2)](https://i.imgur.com/U0xyFmC.png)
 Given:
 
 A Cessna 'Papa' aeroplane weighs 2050 lb with full fuel tanks and all occupants loaded. The loaded 'Moment/1000 inch lb' is 88.5. The maximum baggage compartment load for 'normal' category operations is ____ kg.
@@ -482,7 +484,8 @@ The maximum baggage compartment load for 'normal' category operations is ____ kg
 
 Cessna `Papa` loading system
 
-![Cessna `Papa` loading system](https://i.imgur.com/3Hh7QYJ.png)
+![Cessna `Papa` loading system (1)](https://i.imgur.com/WHmo0K1.png)
+![Cessna `Papa` loading system (2)](https://i.imgur.com/U0xyFmC.png)
 You plan to depart from an aerodrome under the following conditions:
 
 * Aerodrome elevation: 2050ft
@@ -511,7 +514,9 @@ The minimum required takeoff distance is ____ m
 
 Piper `Quebec` loading system
 
-![Piper `Quebec` loading system](https://i.imgur.com/rUDfgZX.png)
+![Piper `Quebec` loading system (1)](https://i.imgur.com/faLNLPM.png)
+![Piper `Quebec` loading system (2)](https://i.imgur.com/2qVBjlZ.png)
+![Piper `Quebec` loading system (3)](https://i.imgur.com/px2F1Lq.png)
 Given:
 
 * RWY: 08/26
@@ -576,10 +581,11 @@ The takeoff safety speed specified on Takeoff Weight Charts is the speed assumed
 
 'ARFOR/TAF 1 -- Area 30'
 
-!['ARFOR/TAF 1 -- Area 30'](https://i.imgur.com/EZs3bcC.png)
+!['ARFOR/TAF 1 -- Area 30' (1)](https://i.imgur.com/1wCrpPs.png)
+!['ARFOR/TAF 1 -- Area 30' (2)](https://i.imgur.com/dkGMEZJ.png)
 'PCA'
 
-!['PCA'](https://i.imgur.com/XAlEcky.png)
+!['PCA'](https://i.imgur.com/mapazir.png)
 The forecast wind direction and speed at 5000ft along the route between Wonthaggi (YWON) and Orbost (YORB) are:
 
 * Variable at 10kt.
