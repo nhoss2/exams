@@ -36,6 +36,39 @@ http://i.imgur.com/faELVuC.jpg
 ARFOR/TAF 3 -- AREA 50 (2)
 http://i.imgur.com/DJQOgp5.jpg
 
+Loading System Piper `Romeo` (1)
+http://i.imgur.com/W3E5zTb.jpg
+
+Loading System Piper `Romeo` (2)
+http://i.imgur.com/TmVLbvT.jpg
+
+Loading System Cessna `Papa` (1)
+http://i.imgur.com/WHmo0K1.jpg
+
+Loading System Cessna `Papa` (2)
+http://i.imgur.com/U0xyFmC.jpg
+
+Loading System Piper `Quebec` (1)
+http://i.imgur.com/faLNLPM.jpg
+
+Loading System Piper `Quebec` (2)
+http://i.imgur.com/2qVBjlZ.jpg
+
+Loading System Piper `Quebec` (3)
+http://i.imgur.com/px2F1Lq.jpg
+
+Loading System Cessna `Sierra` (1)
+http://i.imgur.com/VUZb5bX.jpg
+
+Loading System Cessna `Sierra` (2)
+http://i.imgur.com/URsRrPe.jpg
+
+Loading System Cessna `Sierra` (3)
+http://i.imgur.com/NmAA0L2.jpg
+
+Loading System Cessna `Sierra` (4)
+http://i.imgur.com/ks36OBd.jpg
+
 -}
 
 module Exams.DysonHollandPPLSample1(
@@ -369,7 +402,7 @@ dyson_holland_ppl_sample_1_test14 =
       Blocks
         [
           ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "extract of ARMIDALE WAC (3357)" mempty)])
-        , ImageBlock (Image "extract of ARMIDALE WAC (3357)" "https://i.imgur.com/oOmoGzT.png")
+        , ImageBlock (Image "extract of ARMIDALE WAC (3357)" "https://i.imgur.com/8fpyzO1.png")
         , ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "What is the latitude and longitude of BINNAWAY (just south of Coonabarabran)?" mempty)])
         ]
     )
@@ -395,7 +428,7 @@ dyson_holland_ppl_sample_1_test15 =
       Blocks
         [
           ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "extract of ARMIDALE WAC (3357)" mempty)])
-        , ImageBlock (Image "extract of ARMIDALE WAC (3357)" "https://i.imgur.com/oOmoGzT.png")
+        , ImageBlock (Image "extract of ARMIDALE WAC (3357)" "https://i.imgur.com/8fpyzO1.png")
         , ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "On a direct flight from Narrabri -- YNBR (30°19'S 149°50'E) to Walgett -- YWLG (30°02'S 148°07E), departing YNBR at 0300 UTC, a pinpoint is obtained at Merah North at 0316 UTC after maintaining a constant heading from departure. In order to regain track required abeam Bugilbone, the heading must be altered" mempty)])
         ]
     )
@@ -421,7 +454,7 @@ dyson_holland_ppl_sample_1_test16 =
       Blocks
         [
           ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "extract of ARMIDALE WAC (3357)" mempty)])
-        , ImageBlock (Image "extract of ARMIDALE WAC (3357)" "https://i.imgur.com/oOmoGzT.png")
+        , ImageBlock (Image "extract of ARMIDALE WAC (3357)" "https://i.imgur.com/8fpyzO1.png")
         , ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "On a direct flight from Narrabri -- YNBR (30°19'S 149°50'E) to Walgett -- YWLG (30°02'S 148°07E), which of the following features will provide the best ground speed check" mempty)])
         ]
     )
@@ -447,7 +480,7 @@ dyson_holland_ppl_sample_1_test17 =
       Blocks
         [
           ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "extract of ROCKHAMPTON WAC (3235)" mempty)])
-        , ImageBlock (Image "extract of ROCKHAMPTON WAC (3235)" "https://i.imgur.com/IDTPNDj.png")
+        , ImageBlock (Image "extract of ROCKHAMPTON WAC (3235)" "https://i.imgur.com/I31CHbW.png")
         , ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "A VFR flight derparts Moranbah -- YMRB (22°04'S 148°05'E) at 2300 UTC for a direct flight to Collinsville -- YCSV (20°36'S 147°51'E), estimating YCSV at 2346 UTC. At 2314 UTC, a pinpoint is obtained over the 1761 ft spot height called Boveys Lookout. The ETA for YCSV is now" mempty)])
         ]
     )
@@ -473,7 +506,7 @@ dyson_holland_ppl_sample_1_test18 =
       Blocks
         [
           ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "extract of ROCKHAMPTON WAC (3235)" mempty)])
-        , ImageBlock (Image "extract of ROCKHAMPTON WAC (3235)" "https://i.imgur.com/IDTPNDj.png")
+        , ImageBlock (Image "extract of ROCKHAMPTON WAC (3235)" "https://i.imgur.com/I31CHbW.png")
         , ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "A VFR flight departs Moranbah -- YMRB (22°04'S 148°05'E) at 2300 UTC for a direct flight to Collinsville -- YCSV (20°36'S 147°51'E), estimating YCSV at 2346 UTC. At 2314 UTC, a pinpoint is obtained over the 1761 ft spot height called Boveys Lookout. You estimate the track error to be 6° RIGHT and alter heading 12° left. You estimate being back on track at _____ UTC." mempty)])
         ]
     )
@@ -489,7 +522,7 @@ dyson_holland_ppl_sample_1_test19 =
       Blocks
         [
           ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "extract of ROCKHAMPTON WAC (3235)" mempty)])
-        , ImageBlock (Image "extract of ROCKHAMPTON WAC (3235)" "https://i.imgur.com/IDTPNDj.png")
+        , ImageBlock (Image "extract of ROCKHAMPTON WAC (3235)" "https://i.imgur.com/I31CHbW.png")
         , ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "The latitude of the feature bearing 208°/14nm from Proserpine -- YBPN, is" mempty)])
         ]
     )
@@ -880,7 +913,8 @@ dyson_holland_ppl_sample_1_test39 =
       Blocks
         [
           ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "Piper `Romeo` loading system" mempty)])
-        , ImageBlock (Image "Piper `Romeo` loading system" "https://i.imgur.com/RVtYDpF.png")
+        , ImageBlock (Image "Piper `Romeo` loading system (1)" "https://i.imgur.com/W3E5zTb.png")
+        , ImageBlock (Image "Piper `Romeo` loading system (2)" "https://i.imgur.com/TmVLbvT.png")
         , ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "Given:" mempty)])
         , BulletListBlock (BulletList
             [
@@ -935,7 +969,8 @@ dyson_holland_ppl_sample_1_test40 =
       Blocks
         [
           ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "Cessna `Papa` loading system" mempty)])
-        , ImageBlock (Image "Cessna `Papa` loading system" "https://i.imgur.com/3Hh7QYJ.png")
+        , ImageBlock (Image "Cessna `Papa` loading system (1)" "https://i.imgur.com/WHmo0K1.png")
+        , ImageBlock (Image "Cessna `Papa` loading system (2)" "https://i.imgur.com/U0xyFmC.png")
         , ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "Given:" mempty)])
         , ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "A Cessna 'Papa' aeroplane weighs 2050 lb with full fuel tanks and all occupants loaded. The loaded 'Moment/1000 inch lb' is 88.5. The maximum baggage compartment load for 'normal' category operations is ____ kg." mempty)])
         ,       ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "The maximum baggage compartment load for 'normal' category operations is ____ kg." mempty)])
@@ -954,7 +989,8 @@ dyson_holland_ppl_sample_1_test41 =
       Blocks
         [
           ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "Cessna `Papa` loading system" mempty)])
-        , ImageBlock (Image "Cessna `Papa` loading system" "https://i.imgur.com/3Hh7QYJ.png")
+        , ImageBlock (Image "Cessna `Papa` loading system (1)" "https://i.imgur.com/WHmo0K1.png")
+        , ImageBlock (Image "Cessna `Papa` loading system (2)" "https://i.imgur.com/U0xyFmC.png")
         , ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "You plan to depart from an aerodrome under the following conditions:" mempty)])
         , BulletListBlock (BulletList
             [
@@ -1011,7 +1047,9 @@ dyson_holland_ppl_sample_1_test42 =
       Blocks
         [
           ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "Piper `Quebec` loading system" mempty)])
-        , ImageBlock (Image "Piper `Quebec` loading system" "https://i.imgur.com/rUDfgZX.png")
+        , ImageBlock (Image "Piper `Quebec` loading system (1)" "https://i.imgur.com/faLNLPM.png")
+        , ImageBlock (Image "Piper `Quebec` loading system (2)" "https://i.imgur.com/2qVBjlZ.png")
+        , ImageBlock (Image "Piper `Quebec` loading system (3)" "https://i.imgur.com/px2F1Lq.png")
         , ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "Given:" mempty)])
         , BulletListBlock (BulletList
             [
@@ -1126,9 +1164,10 @@ dyson_holland_ppl_sample_1_test46 =
       Blocks
         [
           ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "'ARFOR/TAF 1 -- Area 30'" mempty)])
-        , ImageBlock (Image "'ARFOR/TAF 1 -- Area 30'" "https://i.imgur.com/EZs3bcC.png")
+        , ImageBlock (Image "'ARFOR/TAF 1 -- Area 30' (1)" "https://i.imgur.com/1wCrpPs.png")
+        , ImageBlock (Image "'ARFOR/TAF 1 -- Area 30' (2)" "https://i.imgur.com/dkGMEZJ.png")
         , ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "'PCA'" mempty)])
-        , ImageBlock (Image "'PCA'" "https://i.imgur.com/XAlEcky.png")
+        , ImageBlock (Image "'PCA'" "https://i.imgur.com/mapazir.png")
         , ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "The forecast wind direction and speed at 5000ft along the route between Wonthaggi (YWON) and Orbost (YORB) are:" mempty)])
         ]
     )
