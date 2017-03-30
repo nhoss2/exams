@@ -1,3 +1,43 @@
+{-
+
+ARMIDALE WAC (3357)
+http://i.imgur.com/8fpyzO1.jpg
+
+ROCKHAMPTON WAC (3235)
+http://i.imgur.com/I31CHbW.jpg
+
+PERTH WAC (3357)
+http://i.imgur.com/mLpAug4.jpg
+
+MSL ANALYSIS 1
+http://i.imgur.com/5FFOvy7.jpg
+
+MSL ANALYSIS 2
+http://i.imgur.com/mQ5O4Ux.jpg
+
+MSL ANALYSIS 3
+http://i.imgur.com/m4x4fAl.jpg
+
+ARFOR/TAF 1 -- AREA 30 (1)
+http://i.imgur.com/1wCrpPs.jpg
+
+ARFOR/TAF 1 -- AREA 30 (2)
+http://i.imgur.com/dkGMEZJ.jpg
+
+ARFOR/TAF 2 -- AREA 40 (1)
+http://i.imgur.com/F2MZCLa.jpg
+
+ARFOR/TAF 2 -- AREA 40 (2)
+http://i.imgur.com/Pp3arxO.jpg
+
+ARFOR/TAF 3 -- AREA 50 (1)
+http://i.imgur.com/faELVuC.jpg
+
+ARFOR/TAF 3 -- AREA 50 (2)
+http://i.imgur.com/DJQOgp5.jpg
+
+-}
+
 module Exams.DysonHollandPPLSample1(
   dyson_holland_ppl_sample_1
 , dyson_holland_ppl_sample_1_test01
