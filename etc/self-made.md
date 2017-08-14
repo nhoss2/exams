@@ -133,3 +133,15 @@ Visibility 8000 metres, 1500 metres horizontally from cloud and 1000ft verticall
 What are the VMC parameters for a VFR flight in Class D airspace?
 
 Visibility 5000 metres, 600 metres horizontally from cloud, 500ft below cloud and 1000ft above cloud.
+
+----
+
+What are the VMC parameters for a VFR flight in Class C airspace below 10000ft AMSL?
+
+Visibility 5000 metres, 1500 metres horizontally from cloud and 1000ft vertically from cloud.
+
+----
+
+What are the VMC parameters for a VFR flight in Class C airspace above 10000ft AMSL?
+
+Visibility 8000 metres, 1500 metres horizontally from cloud and 1000ft vertically from cloud.
