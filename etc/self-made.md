@@ -54,7 +54,7 @@ Stall speed increases.
 
 What do we call the angle between the chord line of an aerofoil and the relative airflow?
 
-Chord line
+Angle of attack
 
 ----
 
