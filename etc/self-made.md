@@ -28,6 +28,12 @@ At what height must an aeroplane not fly over a populated area?
 
 ----
 
+At what height must an aeroplane not fly over an unpopulated area?
+
+500ft AGL
+
+----
+
 What is the effect on lift and drag after increasing power when flying straight and level at normal cruise?
 
 An increase in airspeed and an increase in drag.
