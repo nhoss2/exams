@@ -54,3 +54,4 @@ import Exams.FlightOneFROL as E
 import Exams.Form611486611495SelfMade as E
 import Exams.FROL as E
 import Exams.InstrumentsSelfMade as E
+import Exams.SelfMade as E

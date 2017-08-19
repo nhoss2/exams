@@ -1,5 +1,5 @@
 name:               document
-version:            0.0.1
+version:            0.0.2
 license:            OtherLicense
 license-file:       LICENSE
 author:             Tony Morris <ʇǝu˙sıɹɹoɯʇ@ןןǝʞsɐɥ>
@@ -102,6 +102,7 @@ library
                     Exams.Form611486611495SelfMade
                     Exams.FROL
                     Exams.InstrumentsSelfMade
+                    Exams.SelfMade
                     Output
                     Output.HtmlQuiz
                     Output.Indent

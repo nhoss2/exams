@@ -228,3 +228,10 @@ examMetaTitle ::
   -> ExamMeta s
 examMetaTitle s =
   ExamMeta s Nothing
+
+examMetaTitleSub ::
+  s
+  -> s
+  -> ExamMeta s
+examMetaTitleSub s x =
+  ExamMeta s (Just x)
