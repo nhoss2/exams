@@ -5,6 +5,7 @@
 
 module Document.ExamAST where
 
+import Document.AviationExamMeta
 import Papa
 
 data Test x a =
@@ -206,6 +207,15 @@ multianswer l x r =
   (.~ True)
 
 infixr 9 ..~
+
+(...~) ::
+  ASetter s t a Bool
+  -> ASetter TestMeta s b Bool
+  -> t
+x ...~ y =
+  x ..~ y ..~ notestmeta
+
+infixr 9 ...~
 
 (!.~) ::
   ASetter s t a Bool
