@@ -15,25 +15,9 @@ self_made =
 image' ::
   String
   -> String
-  -> Image String
+  -> Block String
 image' s x =
-  Image s ("https://raw.githubusercontent.com/aviation-tmorris/exams/master/images/" ++ x)
-
-xxx ::
-  Test TestMeta (Blocks String)
-xxx =
-  Test 
-    (
-      Blocks
-        [
-          ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "Using Load System Charlie" mempty)])
-        , ImageBlock (image' "Load System Charlie)" "loading-system-charlie_bak.jpg")
-        , ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "Given EW 695kg, IU 19.788, student pilot 60kg, the instructor 75kg, baggage 95kg, fuel 170L, what is the ZFW weight and arm?" mempty)])
-        ]
-    )
-    (str <$> (_DirectAnswer # "Weight 932kg. Arm 2960mm."))
-    Nothing
-    (selfmade_meta ...~ bak_meta)
+  ImageBlock (Image s ("https://raw.githubusercontent.com/aviation-tmorris/exams/master/images/" ++ x))
 
 tests ::
   [Test TestMeta (Blocks String)]
@@ -54,6 +38,16 @@ tests =
         -> f (g (Blocks s))
       str' =
         ((str <$>) <$>)
+      textp ::
+        s
+        -> Block s
+      textp s =
+        ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline s mempty)])
+      bullet' ::  
+        [Block s]
+        -> Block s
+      bullet' x =
+        BulletListBlock (BulletList [Blocks x])
   in  concat [
         str'
         [
@@ -237,15 +231,82 @@ tests =
             (
               Blocks
                 [
-                  ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "Using Load System Charlie" mempty)])
-                , ImageBlock (image' "Load System Charlie)" "loading-system-charlie_bak.jpg")
-                , ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline "Given EW 695kg, IU 19.788, student pilot 60kg, the instructor 75kg, baggage 95kg, fuel 170L, what is the ZFW weight and arm?" mempty)])
+                  textp "Using Load System Charlie"
+                , image' "Load System Charlie" "loading-system-charlie_bak.jpg"
+                , textp "Given EW 695kg, IU 19.788, student pilot 60kg, the instructor 75kg, baggage 95kg, fuel 170L, what is the ZFW weight and arm?"
                 ]
             )
             (str <$> (_DirectAnswer # "Weight 932kg. Arm 2960mm."))
             Nothing
             (selfmade_meta ...~ bak_meta)
-        ]
+        , Test 
+            (
+              Blocks
+                [
+                  textp "Using Load System Charlie"
+                , image' "Load System Charlie" "loading-system-charlie_bak.jpg"
+                , textp "Given EW 695kg IU 19.788, student pilot 60kg, the instructor 75kg, baggage 95kg, fuel 170L, what is the take-off weight and arm?"
+                ]
+            )
+            (str <$> (_DirectAnswer # "Weight 1053kg. Arm 2960mm."))
+            Nothing
+            (selfmade_meta ...~ bak_meta)
+          ]
+        , let airfield ::
+                Blocks String
+                -> String
+                -> Test TestMeta (Blocks String)
+              airfield q a =
+                Test 
+                  (
+                    Blocks
+                      [
+                        textp "Using the following performance data:"
+                      , bullet'
+                          [
+                            textp "Elevation: 1890ft"
+                          , textp "Runways:"
+                          , bullet'
+                              [
+                                textp "17/35 sealed TODA 3,000 metres (slope: level)"
+                              , textp "12/30 short grass TODA 1,000 metres (slope: 1% down to SE)"
+                              ]
+                          , textp "ATIS:"
+                          , bullet'
+                              [
+                                textp "Terminal Information Delta"
+                              , textp "Runway 12"
+                              , textp "Wind 150/15"
+                              , textp "QNH 1010"
+                              , textp "Temperature 15 degrees"
+                              , textp "Cloud FEW 3000"
+                              , textp "Works in progress Runway 17/35"
+                              ]
+                          ]
+                      ] `mappend` q
+                  )
+                  (str <$> (_DirectAnswer # a))
+                  Nothing
+                  (selfmade_meta ...~ bak_meta)
+              airfieldx ::
+                String
+                -> String
+                -> Test TestMeta (Blocks String)
+              airfieldx =
+                airfield . Blocks . pure . textp
+          in  [
+                airfieldx "What is the pressure altitude of this airfield?" "1980ft."
+              , airfieldx "What is the density altitude of this airfield?" "2460ft."
+              , airfieldx "What is the headwind component on the duty runway?" "12kt."
+              , airfield (
+                  Blocks
+                    [
+                      textp "Using the Cessna Landing chart"
+                    , image' "Cessna Landing chart" "cessna-landing-chart_bak.jpg"
+                    , textp "At the MTOW, what is the take-off distance required on Runway 12?"
+                    ])
+                  "890m."
+              ]
       , str'
         [
           ""
@@ -253,4 +314,3 @@ tests =
           ""
         ]
       ]
-

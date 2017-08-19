@@ -53,6 +53,7 @@ import Exams.FlightOneFROL
 import Exams.Form611486611495SelfMade
 import Exams.FROL
 import Exams.InstrumentsSelfMade
+import Exams.SelfMade
 import Data.String(String)
 import Document.AST(Blocks)
 import Document.AviationExamMeta(TestMeta)
@@ -113,4 +114,5 @@ allexams =
   , aviation_theory_centre_basic_aeronautical_knowledge
   , bob_tait_chapter_revision_meteorology
   , cessna_172R_air_speeds_selfmade
+  , self_made
   ]
