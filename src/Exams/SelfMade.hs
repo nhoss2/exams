@@ -306,6 +306,14 @@ tests =
                     , textp "At the MTOW, what is the take-off distance required on Runway 12?"
                     ])
                   "890m."
+              , airfield (
+                  Blocks
+                    [
+                      textp "Using the Piper Landing chart"
+                    , image' "Piper Landing chart" "piper-landing-chart_bak.jpg"
+                    , textp "What is the landing distance required?"
+                    ])
+                  "890m."
               ]
       , str'
         [
