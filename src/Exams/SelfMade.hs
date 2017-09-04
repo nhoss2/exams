@@ -43,6 +43,16 @@ tests =
           (_DirectAnswer # a)
           Nothing
           (selfmade_meta ..~ instruments_meta ...~ bak_meta)
+      atest' ::
+        s
+        -> s
+        -> Test TestMeta s
+      atest' q a = 
+        Test
+          q
+          (_DirectAnswer # a)
+          Nothing
+          (selfmade_meta ..~ air_speeds_meta ...~ bak_meta)
       rpltest'' ::
         s
         -> [s]
@@ -656,4 +666,84 @@ tests =
               ]
         ]
 -- End Form 61.1486 61.1495 self-made
+        , str'
+        [
+          "What is the significance of the red band on the ASI?"
+          `atest'`
+          "Vne (never exceed speed)."
+        , "Where is the never exceed speed indicated on the ASI?"
+          `atest'`
+          "End of yellow band, start of red band."
+        , "What is the significance of the yellow band on the ASI?"
+          `atest'`
+          "Vno (maximum structural cruise) to Vne (never exceed)."
+        , "What is the significance of the white band on the ASI?"
+          `atest'`
+          "Vs0 (stall speed with full flaps) to Vfe (maximum speed with flaps extended)."
+        , "Where is the stall speed with full flaps indicated on the ASI?"
+          `atest'`
+          "Start of white band."
+        , "Where is the maximum speed with flaps extended indicated on the ASI?"
+          `atest'`
+          "End of white band."
+        , "What is the significance of the green band on the ASI?"
+          `atest'`
+          "Vs1 (stall speed with no flap, no gear) to Vno (maximum structural cruise)."
+        , "Where is the stall speed with no flap indicated on the ASI?"
+          `atest'`
+          "Start of green band."
+        , "Where is the maximum structural cruise indicated on the ASI?"
+          `atest'`
+          "End of green band, start of yellow band."
+-- END air speed indicator self-made exam          
+        , "What is meant by Vx?"
+          `atest'`
+          "Best angle of climb."
+        , "What V-speed is best angle of climb?"
+          `atest'`
+          "Vx"
+        , "What is meant by Vy?"
+          `atest'`
+          "Best rate of climb."
+        , "What V-speed is best rate of climb?"
+          `atest'`
+          "Vy"
+        , "What is meant by Va?"
+          `atest'`
+          "Maximum maneuvering speed; speed of maximum application of a flight control."
+        , "What V-speed is maximum maneuvering speed?"
+          `atest'`
+          "Va"
+        , "What is meant by Vb?"
+          `atest'`
+          "Maximum turbulence penetration speed."
+        , "What V-speed is maximum turbulence penetration speed?"
+          `atest'`
+          "Vb"
+        , "What is meant by Vno?"
+          `atest'`
+          "Maximum structural cruise speed."
+        , "What V-speed is maximum structural cruise speed?"
+          `atest'`
+          "Vno"
+        , "What is meant by Vne?"
+          `atest'`
+          "Never exceed speed."
+        , "What V-speed is never exceed speed?"
+          `atest'`
+          "Vne"
+        , "What is meant by Vs0?"
+          `atest'`
+          "Stall speed in landing configuration; full flap, gear extended."
+        , "What V-speed is stall speed in landing configuration?"
+          `atest'`
+          "Vs0"
+        , "What is meant by Vs1?"
+          `atest'`
+          "Stall speed in clean configuration; no flap, no gear."
+        , "What V-speed is stall speed in clean configuration?"
+          `atest'`
+          "Vs1"
+        ]
+-- END airspeeds self-made exam        
       ]

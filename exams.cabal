@@ -53,10 +53,7 @@ library
                     Exams.AirborneAviationMeterology
                     Exams.AirborneAviationPreAreaSolo
                     Exams.AirborneAviationPreCircuitSolo
-                    Exams.AirSpeedIndicatorSelfMade
-                    Exams.AirSpeedsSelfMade
                     Exams.AllExams
-                    Exams.ATCBAK
                     Exams.ATCFROL1
                     Exams.ATCFROL2
                     Exams.ATCFROL3
@@ -99,9 +96,7 @@ library
                     Exams.CurtisAviationPPLTrial6
                     Exams.DysonHollandPPLSample1
                     Exams.FlightOneFROL
-                    Exams.Form611486611495SelfMade
                     Exams.FROL
-                    Exams.InstrumentsSelfMade
                     Exams.SelfMade
                     Output
                     Output.HtmlQuiz

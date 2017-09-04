@@ -5,10 +5,7 @@ module Exams(
 import Exams.AirborneAviationMeterology as E
 import Exams.AirborneAviationPreAreaSolo as E
 import Exams.AirborneAviationPreCircuitSolo as E
-import Exams.AirSpeedIndicatorSelfMade as E
-import Exams.AirSpeedsSelfMade as E
 import Exams.AllExams as E
-import Exams.ATCBAK as E
 import Exams.ATCFROL1 as E
 import Exams.ATCFROL2 as E
 import Exams.ATCFROL3 as E
@@ -51,7 +48,5 @@ import Exams.CurtisAviationPPLTrial5 as E
 import Exams.CurtisAviationPPLTrial6 as E
 import Exams.DysonHollandPPLSample1 as E
 import Exams.FlightOneFROL as E
-import Exams.Form611486611495SelfMade as E
 import Exams.FROL as E
-import Exams.InstrumentsSelfMade as E
 import Exams.SelfMade as E

@@ -5,9 +5,6 @@ module Exams.AllExams(
 import Exams.AirborneAviationMeterology
 import Exams.AirborneAviationPreAreaSolo
 import Exams.AirborneAviationPreCircuitSolo
-import Exams.AirSpeedIndicatorSelfMade
-import Exams.AirSpeedsSelfMade
-import Exams.ATCBAK
 import Exams.ATCFROL1
 import Exams.ATCFROL2
 import Exams.ATCFROL3
@@ -50,9 +47,7 @@ import Exams.CurtisAviationPPLTrial5
 import Exams.CurtisAviationPPLTrial6
 import Exams.DysonHollandPPLSample1
 import Exams.FlightOneFROL
-import Exams.Form611486611495SelfMade
 import Exams.FROL
-import Exams.InstrumentsSelfMade
 import Exams.SelfMade
 import Data.String(String)
 import Document.AST(Blocks)
@@ -66,11 +61,9 @@ allexams =
     flight_one_flight_radio_operator_licence
   , bob_tait_chapter_revision_HPr6
   , bob_tait_chapter_revision_A2
-  , form_61_1486_61_1495_selfmade
   , bob_tait_chapter_revision_BAP
   , bob_tait_chapter_revision_HPr2
   , bob_tait_chapter_revision_A5
-  , instruments_selfmade
   , curtis_aviation_PPL_trial_5
   , bob_tait_chapter_revision_A3
   , flight_radio_operator_licence
@@ -90,7 +83,6 @@ allexams =
   , bob_tait_chapter_revision_A6
   , bob_tait_prearea_solo
   , aviation_theory_centre_precircuit_solo
-  , air_speeds_selfmade
   , dyson_holland_ppl_sample_1
   , bob_tait_chapter_revision_HPr7
   , curtis_aviation_PPL_trial_6
@@ -100,7 +92,6 @@ allexams =
   , aviation_theory_centre_flight_radio_operator_licence_8
   , airborne_aviation_prearea_solo
   , aviation_theory_centre_flight_radio_operator_licence_1
-  , air_speed_indicator_selfmade
   , aviation_theory_centre_flight_radio_operator_licence_6
   , aviation_theory_centre_prearea_solo
   , aviation_theory_centre_flight_radio_operator_licence_5
@@ -111,7 +102,6 @@ allexams =
   , bob_tait_chapter_revision_GK3
   , bob_tait_precircuit_solo
   , aviation_theory_centre_flight_radio_operator_licence_4
-  , aviation_theory_centre_basic_aeronautical_knowledge
   , bob_tait_chapter_revision_meteorology
   , cessna_172R_air_speeds_selfmade
   , self_made
