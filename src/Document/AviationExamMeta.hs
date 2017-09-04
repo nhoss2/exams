@@ -50,6 +50,8 @@ data TestMeta =
       Bool
   , _airborne_aviation_meta ::
       Bool
+  , _light_gun_signals_meta ::
+      Bool
   } deriving (Eq, Ord, Show)
 
 makeClassy ''TestMeta
@@ -80,11 +82,12 @@ notestmeta =
     False
     False
     False
+    False
 
 labels ::
   TestMeta
   -> [String]
-labels (TestMeta m01 m02 m03 m04 m05 m06 m07 m08 m09 m10 m11 m12 m13 m14 m15 m16 m17 m18 m19 m20 m21 m22) =
+labels (TestMeta m01 m02 m03 m04 m05 m06 m07 m08 m09 m10 m11 m12 m13 m14 m15 m16 m17 m18 m19 m20 m21 m22 m23) =
   let r x l = if x then [l] else []
   in  concat
         [
@@ -110,4 +113,5 @@ labels (TestMeta m01 m02 m03 m04 m05 m06 m07 m08 m09 m10 m11 m12 m13 m14 m15 m16
         , r m20 "Basic Aeronautical Knowledge"
         , r m21 "Air Speeds"
         , r m22 "Airborne Aviation"
+        , r m23 "Light Gun Signals"
         ]
