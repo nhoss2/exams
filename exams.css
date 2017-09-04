@@ -64,3 +64,15 @@ div.directanswer {
 div.multianswer {
   
 }
+
+.emphasis {
+  font-style: italic;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.strikeout {
+  text-decoration: line-through;
+}
