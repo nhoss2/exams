@@ -46,7 +46,7 @@ instruments_selfmade_test01 =
   str <$>
     Test
     ("Which instruments are vacuum powered?")
-    (_DirectAnswer # "Attitude Indicator, Heading Indicator")
+    (_DirectAnswer # "Attitude Indicator, Heading Indicator (Directional Gyrometer)")
     Nothing
     (instruments_meta ..~ rpl_meta ..~ notestmeta)
 

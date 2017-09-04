@@ -1,5 +1,6 @@
 module Exams.SelfMade where
 
+import qualified Data.Set as Set
 import Document.AST
 import Document.AviationExamMeta
 import Document.ExamAST
@@ -32,17 +33,59 @@ tests =
           (_DirectAnswer # a)
           Nothing
           (selfmade_meta ...~ bak_meta)
+      itest' ::
+        s
+        -> s
+        -> Test TestMeta s
+      itest' q a = 
+        Test
+          q
+          (_DirectAnswer # a)
+          Nothing
+          (selfmade_meta ..~ instruments_meta ...~ bak_meta)
+      rpltest'' ::
+        s
+        -> [s]
+        -> Test TestMeta s
+      rpltest'' q a = 
+        Test
+          q
+          (_MultiAnswer # a)
+          Nothing
+          (selfmade_meta ..~ rpl_meta ...~ bak_meta)
       str' ::
         (Functor g, Functor f) =>
         f (g s)
         -> f (g (Blocks s))
       str' =
         ((str <$>) <$>)
+      dectextpSegment ::
+        s
+        -> TextInlineDecorations
+        -> ParagraphSegment s
+      dectextpSegment s d =
+        TextInlineParagraphSegment (TextInline s d)
+      dectextpSegment1 ::
+        s
+        -> TextInlineDecoration
+        -> ParagraphSegment s
+      dectextpSegment1 s d =
+        dectextpSegment s (TextInlineDecorations (Set.singleton d))
+      textpSegment ::
+        s
+        -> ParagraphSegment s
+      textpSegment s =
+        dectextpSegment s mempty
+      p ::
+        [ParagraphSegment s]
+        -> Blocks s
+      p x =
+        Blocks [ParagraphBlock (Paragraph x)]
       textp ::
         s
         -> Block s
       textp s =
-        ParagraphBlock (Paragraph [TextInlineParagraphSegment (TextInline s mempty)])
+        ParagraphBlock (Paragraph [textpSegment s])
       bullet' ::  
         [Block s]
         -> Block s
@@ -51,7 +94,7 @@ tests =
   in  concat [
         str'
         [
-          "When must an aeroplane's fuel must be checked for the presence of water?"
+          "When must an aeroplane's fuel be checked for the presence of water?"
           `test'`
           "Prior to the first flight of the day and following each refuelling."
         , "The engine has failed. What is the call?"
@@ -318,8 +361,299 @@ tests =
 -- end ATC BAK
       , str'
         [
-          ""
-          `test'`
-          ""
+          "Which instruments are vacuum gyrometer powered?"
+          `itest'`
+          "Attitude Indicator, Heading Indicator (Directional Gyrometer)."
+        , "Which instruments are pitot-static powered?"
+          `itest'`
+          "Altimeter, Vertical Speed Indicator."
+        , "Which instruments are electric gyrometer powered?"
+          `itest'`
+          "Turn Indicator."
+        , "How is the Air Speed Indicator powered?"
+          `itest'`
+          "Pitot-static."
+        , "How is the Altimeter powered?"
+          `itest'`
+          "Pitot-static (static port only)."
+        , "How is the Vertical Speed Indicator powered?"
+          `itest'`
+          "Pitot-static (static port only)."
+        , "How is the Attitude Indicator powered?"
+          `itest'`
+          "Vacuum gyrometer."
+        , "How is the Heading Indicator powered?"
+          `itest'`
+          "Vacuum gyrometer."
+        , "How is the Turn Indicator powered?"
+          `itest'`
+          "Electric gyrometer."
         ]
+-- end Instrument self-made
+      , [
+          str "What are the privileges and limitations of the recreational pilot licence with aeroplane category rating?"
+          `rpltest''`
+          [
+            p
+              [
+                textpSegment "can carry passengers if at least 3 take-offs and landings within previous 90 days "
+              , dectextpSegment1 "[CASR61.395]" Emphasis
+              ]
+          , p
+              [
+                textpSegment "pilot holds and carries "
+              , dectextpSegment1 "[CASR61.420(b)]" Emphasis
+              , textpSegment " class 1 or 2 medical certificate or RAMCP under conditions in subparagraph 2 "
+              , dectextpSegment1 "[CASR61.405]" Emphasis
+              ]
+          , str "pilot must carry documents; licence, medical certificate, maintenance release, pilot operating handbook"
+          , p
+              [
+                textpSegment "must have English proficiency assessment "
+              , dectextpSegment1 "[CASR61.422]" Emphasis
+              ]
+          , p
+              [
+                textpSegment "pilot only registered aircraft "
+              , dectextpSegment1 "[CASR61.425]" Emphasis
+              ]
+          , p
+              [
+                textpSegment "airspace within 25nm of departure aerodrome, within flight training area and direct between departure aerodrome and flight training area "
+              , dectextpSegment1 "[CASR61.427]" Emphasis
+              ]
+          , p
+              [
+                textpSegment "single-engine aircraft, MTOW <= 1500kg, day VFR, private operation or flight training "
+              , dectextpSegment1 "[CASR61.460]" Emphasis
+              ]
+          ]
+          , str "What are the drug and alcohol regulations?"
+            `rpltest''`
+            [
+              p
+                [
+                  textpSegment "8 hours from consumption of alcohol to departure "
+                , dectextpSegment1 "[CASR99]" Emphasis
+                ]
+            , p
+                [
+                  textpSegment "not intoxicated; 0.02 grams per 210 litres of breath "
+                , dectextpSegment1 "[CASR99]" Emphasis
+                ]
+            , p
+                [
+                  textpSegment "crew will not consume while on board "
+                , dectextpSegment1 "[CASR99]" Emphasis
+                ]
+            , p
+                [
+                  textpSegment "consult DAME regarding use of drugs "
+                , dectextpSegment1 "[CASR99]" Emphasis
+                ]
+            ]
+          , str "What are the VFR aircraft instrument requirements?"
+            `rpltest''`
+            [
+              p
+                [
+                  textpSegment "airspeed indicator "
+                , dectextpSegment1 "[CAO20.18(10) and CAO20.18(Appendix 1)]" Emphasis
+                ]
+            , p
+                [
+                  textpSegment "altimeter "
+                , dectextpSegment1 "[CAO20.18(10) and CAO20.18(Appendix 1)]" Emphasis
+                ]
+            , p
+                [
+                  textpSegment "direct or remote magnetic compass "
+                , dectextpSegment1 "[CAO20.18(10) and CAO20.18(Appendix 1)]" Emphasis
+                ]
+            , p
+                [
+                  textpSegment "timepiece with hours, minutes, seconds "
+                , dectextpSegment1 "[CAO20.18(10) and CAO20.18(Appendix 1)]" Emphasis
+                ]
+            ]
+          , str "What are the emergency equipment requirements?"
+            `rpltest''`
+            [
+              p
+                [
+                  textpSegment "life jackets when over water and out of glide "
+                , dectextpSegment1 "[CAO20.11(5.1)]" Emphasis
+                ]
+            , p
+                [
+                  textpSegment "sufficient life raft(s) when minimum of (30 minutes cruise) and (100nm) "
+                , dectextpSegment1 "[CAO20.11(5.2.1)]" Emphasis
+                ]
+            , p
+                [
+                  textpSegment "if life raft required, 1 ELT and pyro distress signals "
+                , dectextpSegment1 "[CAO20.11(6.1)]" Emphasis
+                ]
+            , p
+                [
+                  textpSegment "if more than one life raft required, then >= 2 (approved ELT under reg 252A) transmitters 121.5MHz and 243MHz and stowed ready for use "
+                , dectextpSegment1 "[CAO20.11(6.1)]" Emphasis
+                ]
+            , p
+                [
+                  textpSegment "single-engine, over water, not equipped with radio or incapable of air-to-ground radio, not required to carry a life raft, shall carry ELT (121.5MHz and 243MHz approved under reg 252A) "
+                , dectextpSegment1 "[CAO20.11(6.2)]" Emphasis
+                ]
+            ]          
+          , str "What emergency procedures must the passengers be briefed on?"
+            `rpltest''`
+            [
+              p
+                [
+                  textpSegment "smoking requirements "
+                , dectextpSegment1 "[CAO20.11(14.1.1)]" Emphasis
+                ]
+            , p
+                [
+                  textpSegment "use of seat belts "
+                , dectextpSegment1 "[CAO20.11(14.1.1)]" Emphasis
+                ]
+            , p
+                [
+                  textpSegment "location of emergency exits "
+                , dectextpSegment1 "[CAO20.11(14.1.1)]" Emphasis
+                ]
+            , p
+                [
+                  textpSegment "use of oxygen where applicable "
+                , dectextpSegment1 "[CAO20.11(14.1.1)]" Emphasis
+                ]
+            , p
+                [
+                  textpSegment "use of floatation devices where applicable "
+                , dectextpSegment1 "[CAO20.11(14.1.1)]" Emphasis
+                ]
+            , p
+                [
+                  textpSegment "stowage of luggage "
+                , dectextpSegment1 "[CAO20.11(14.1.1)]" Emphasis
+                ]
+            , p
+                [
+                  textpSegment "onboard survival equipment "
+                , dectextpSegment1 "[CAO20.11(14.1.1)]" Emphasis
+                ]
+            ]
+          , str "What are the fuel and oil requirements for flight?"
+            `rpltest''`
+            [
+              p
+                [
+                  textpSegment "PiC must take steps to ensure sufficient fuel and oil "
+                , dectextpSegment1 "[CAR1988(234)]" Emphasis
+                ]
+            , p
+                [
+                  textpSegment "Fixed fuel reserve for VFR, aeroplane, piston-engine: 45 minutes "
+                , dectextpSegment1 "[CAAP 234-1(1)]" Emphasis
+                ]
+            , p
+                [
+                  textpSegment "5-8 quarts of oil "
+                , dectextpSegment1 "[Cessna 172 PoH Section 8 CAPACITY OF ENGINE SUMP]" Emphasis
+                ]
+            ]
+          , str "What are cargo and passenger loading requirements?"
+            `rpltest''`
+            [
+              p
+                [
+                  textpSegment "cargo on or above floor shall be restrained "
+                , dectextpSegment1 "[CAO20.16.2(3)]" Emphasis
+                ]
+            , p
+                [
+                  textpSegment "cargo shall not obstruct flight controls "
+                , dectextpSegment1 "[CAO20.16.2(4.1)]" Emphasis
+                , textpSegment ", emergency exits "
+                , dectextpSegment1 "[CAO20.16.2(4.2)]" Emphasis
+                ]
+             , p
+                [
+                  textpSegment "cargo on a passenger seat shall evenly distribute weight, not exceeding 77kg "
+                , dectextpSegment1 "[CAO20.16.2(5.1)]" Emphasis
+                , textpSegment " and restrained "
+                , dectextpSegment1 "[CAO20.16.2(5.2)]" Emphasis
+                ]
+             , p
+                [
+                  textpSegment "cargo on unoccupied control seat shall not exceed 77kg "
+                , dectextpSegment1 "[CAO20.16.2(6.2)]" Emphasis
+                , textpSegment ", restrained "
+                , dectextpSegment1 "[CAO20.16.2(6.4)]" Emphasis
+                , textpSegment ", flight controls removed if easy "
+                , dectextpSegment1 "[CAO20.16.2(6.3.1)]" Emphasis
+                , textpSegment ", not interfere with aircraft operation "
+                , dectextpSegment1 "[CAO20.16.2(6.3)]" Emphasis
+                ]
+             , p
+                [
+                  textpSegment "seat belts during take-off, landing, < 1000ft AGL, turbulence "
+                , dectextpSegment1 "[CAO20.16.3(4.1)]" Emphasis
+                ]
+             , p
+                [
+                  textpSegment "one pilot crew wearing seat belt at all times "
+                , dectextpSegment1 "[CAO20.16.3(4.2)]" Emphasis
+                ]
+             , p
+                [
+                  textpSegment "seats upright during take-off and landing "
+                , dectextpSegment1 "[CAO20.16.3(5.1)]" Emphasis
+                ]
+             , p
+                [
+                  textpSegment "passenger in control seat must be given instruction, no interfere with flight controls "
+                , dectextpSegment1 "[CAO20.16.3(11.1)]" Emphasis
+                ]
+             , p
+                [
+                  textpSegment "two infants (<=3 years of age) may be carried on one seat with total weight <= 77kg "
+                , dectextpSegment1 "[CAO20.16.3(13.1)]" Emphasis
+                ]
+            ]
+          , str "What are the privileges and limitations of the single engine aeroplane class rating?"
+            `rpltest''`
+            [
+              p
+                [
+                  textpSegment "pilot licence must demonstrate competency of part 61 MoS "
+                , dectextpSegment1 "[CASR61.400]" Emphasis
+                ]
+            , p
+                [
+                  textpSegment "flight review every 24 months, within 3 months of expiry, and valid to the end of that month "
+                , dectextpSegment1 "[CASR61.745]" Emphasis
+                ]
+            ]
+          , str "What requirement applies to take-off and landing distances?"
+            `rpltest''`
+            [
+              p
+                [
+                  textpSegment "Add 15% to all take-off and landing distances for MTOW <= 2000kg "
+                , dectextpSegment1 "[CAO20.7.4(6.1)]" Emphasis
+                ]
+            ]
+          , str <$>
+              "What documents must be carried?"
+              `rpltest''`
+              [
+                "Maintenance release"
+              , "Pilot Operating Handbook"
+              , "Aviation Medical Certificate"
+              , "Pilot Licence"
+              ]
+        ]
+-- End Form 61.1486 61.1495 self-made
       ]
