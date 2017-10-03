@@ -70,6 +70,12 @@ tests =
         -> Test TestMeta s
       mettest' = 
         xtest' meteorology_meta
+      morsetest' ::
+        s
+        -> s
+        -> Test TestMeta s
+      morsetest' = 
+        xtest' morse_code_meta
       rpltest'' ::
         s
         -> [s]
@@ -833,11 +839,98 @@ tests =
             `mettest'`
             "NSC"
           ]
+-- END meteorology (okta), self-made
+        , str'
+          [
+            "Morse code for: sphinx"
+            `morsetest'`
+            "•••  •--•  ••  -•  -••-"
+          , "Morse code for: of"
+            `morsetest'`
+            "---  ••-•"
+          , "Morse code for: black"
+            `morsetest'`
+            "-•••  •-••  •-  -•-•  -•-"
+          , "Morse code for: quartz"
+            `morsetest'`
+            "--•-  ••-  •-  •-•  -  --••"
+          , "Morse code for: judge"
+            `morsetest'`
+            "•---  ••-  -••  --•  •"
+          , "Morse code for: my"
+            `morsetest'`
+            "--  -•--"
+          , "Morse code for: vow"
+            `morsetest'`
+            "•••-  ---  •--"
+          , "Morse code for: pack"
+            `morsetest'`
+            "•--•  •-"
+          , "Morse code for: box"
+            `morsetest'`
+            "-•••"
+          , "Morse code for: with"
+            `morsetest'`
+            "•--  ••  -  ••••"
+          , "Morse code for: five"
+            `morsetest'`
+            "••-•  ••  •••-  •"
+          , "Morse code for: dozen"
+            `morsetest'`
+            "-••  ---  --••  •  -•"
+          , "Morse code for: liquor"
+            `morsetest'`
+            "•-••  ••  --•-  ••-  ---  •-•"
+          , "Morse code for: jugs"
+            `morsetest'`
+            "•---  ••-  --•  •••"
+          , "Morse code for: 149"
+            `morsetest'`
+            "•----  ••••-  ----•"
+          , "Morse code for: 2570"
+            `morsetest'`
+            "••---  •••••  --•••  -----"
+          , "Morse code for: 368"
+            `morsetest'`
+            "•••--   -••••  ---••"
+          , "What word is this morse code? -•  ---  •--"
+            `morsetest'`
+            "now"
+          , "What word is this morse code? ••-•  •-  -••-"
+            `morsetest'`
+            "fax"
+          , "What word is this morse code? --•-  ••-  ••  --••"
+            `morsetest'`
+            "quiz"
+          , "What word is this morse code? •---  •-  -•-•  -•-"
+            `morsetest'`
+            "jack"
+          , "What word is this morse code? --  -•--"
+            `morsetest'`
+            "my"
+          , "What word is this morse code? -•••  •-•  •-  •••-  •"
+            `morsetest'`
+            "brave"
+          , "What word is this morse code? --•  ••••  ---  •••  -"
+            `morsetest'`
+            "ghost"
+          , "What word is this morse code? •--•  •-••  •  -••"
+            `morsetest'`
+            "pled"
+          , "What number is this morse code? ••••• ----• •----"
+            `morsetest'`
+            "591"
+          , "What number is this morse code? --•••  ••---  -----"
+            `morsetest'`
+            "720"
+          , "What number is this morse code? •••--  ---••  -••••  ••••-"
+            `morsetest'`
+            "3864"
+          ]
+-- END morse code, self-made
       ]
 
 -- TODO
--- * Meteorology self-made
--- * Morse code self-made
 -- * Dyson Holland exams
 -- * Bob Tait RPL
 -- * ATC BAK chapters
