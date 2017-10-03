@@ -928,10 +928,69 @@ tests =
             "3864"
           ]
 -- END morse code, self-made
+        , str'
+          [
+            "When must a pilot intending to operate within an ADIZ, lodge flight notification?"
+            `test'`
+            "At least 60 minutes prior to entry to the ADIZ."
+          , "Under what conditions may two passengers occupy one seat?"
+            `test'`
+            "Two children (aged between 3 and 13 years) whose combined weight does not exceed 77 kg."
+          , "Under what conditions can a passenger be carried on the lap of another passenger?"
+            `test'`
+            "An infant who has not reached the age of three years may be carried on the lap of an adult passenger providing that the seat belt is secured around the adult but not the infant."
+          , "Under what conditions can a passenger be carried in a bassinet?"
+            `test'`
+            "An infant may be carried in a bassinet provided that the bassinet is of an approved type and is restrained from all movement."
+          , "Under what conditions is a mercy flight declared?"
+            `test'`
+            "A flight, declared by the pilot in command, which will involve contravening one or more regulations, for the purpose of relieving a person from grave or imminent danger, where failure to make the flight is likely to result in serious or permanent disability or loss of life."
+          , "Two aircraft are approaching each other in flight almost head-on, and there appears to be a risk of a collision. What is the appropriate action?"
+            `test'`
+            "Both aircraft turn right to avoid collision."
+          , "When must a destination TAF, that is required for a flight, be valid?"
+            `test'`
+            "at least 30 min before to at least 60 min after the planned ETA"
+          , "Except when operating within 50 miles of the departure point, when must the pilot in command of a VFR flight by day provide for an alternate aerodrome when arrival at the destination aerodrome is estimated to occur during the currency of, or up to 30 minutes prior to, the forecast commencement?"
+            `test'`
+            "more than SCT cloud below a ceiling of 1500 feet"
+          , "The planned track on a VFR flight in Class G airspace is 180M and the ARFOR indicates 'BKN CU/SC 7000/10000'. If the navigation is to be by visual reference to the ground, what is the highest cruising altitude available?"
+            `test'`
+            "4500ft"
+          , "An aeroplane takes off on a private flight with 50 gal of usable fuel in the tanks. If the flight time is 1h 55min and the planned cruise fuel consumption is 9 gal/hr, assuming the fixed reserve remains intact, what is the remaining fuel available at destination?"
+            `test'`
+            "26 gal"
+          , "For supercharging, how is a centrifugal compressor driven?"
+            `test'`
+            "The engine (through gears) or driven by an exhaust gas turbine."
+          , "What factor(s) that take account of aeroplane configuration and pilot technique on a takeoff weight chart?"
+            `test'`
+            "power required, flap setting and takeoff safety speed"
+          , "What is the length of runway which is declared to be available and suitable for the ground landing run of an aeroplane is known as?"
+            `test'`
+            "Landing Distance Available"
+          , "In a MET forecast, wind direction is related to"
+            `test'`
+            "true north"
+          , "In TAFs and METARs, cloud height refers to"
+            `test'`
+            "height above the aerodrome (AGL)."
+          , "An aeroplane has a straight and level stall speed of 60kt. If the 'apparent' weight is increased by 50% i.e. the load factor is increased by 50%, what is the new stall speed?"
+            `test'`
+            "73.5kt"
+          , "What is the effect on lift of increasing angle of attack?"
+            `test'`
+            "Increases until critical angle of attack, then decreases."
+          , "While maintaining a constant angle of bank and altitude in a coordinated turn, what is the effect on rate and radius of the turn by increasing IAS?"
+            `test'`
+            "decrease the rate of turn and increase the radius of turn."
+         ]
+-- END Dyson Holland PPL Sample Exam 1
       ]
 
 -- TODO
--- * Dyson Holland exams
+-- * Curtis Aviation trial exams
 -- * Bob Tait RPL
 -- * ATC BAK chapters
 -- * Bob Tait Chapters
+-- "computing TAS"
