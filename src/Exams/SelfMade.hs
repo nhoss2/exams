@@ -378,7 +378,7 @@ tests =
                     ])
                   "890m."
               ]
--- end ATC BAK
+-- END ATC BAK
       , str'
         [
           "Which instruments are vacuum gyrometer powered?"
@@ -409,7 +409,7 @@ tests =
           `itest'`
           "Electric gyrometer."
         ]
--- end Instrument self-made
+-- END Instrument self-made
       , [
           str "What are the privileges and limitations of the recreational pilot licence with aeroplane category rating?"
           `rpltest''`
