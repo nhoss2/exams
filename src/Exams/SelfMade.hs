@@ -1,3 +1,5 @@
+{-# LANGUAGE RankNTypes #-}
+
 module Exams.SelfMade where
 
 import qualified Data.Set as Set
@@ -33,36 +35,41 @@ tests =
           (_DirectAnswer # a)
           Nothing
           (selfmade_meta ...~ bak_meta)
+      xtest' ::
+        Lens' TestMeta Bool
+        -> s
+        -> s
+        -> Test TestMeta s
+      xtest' m q a = 
+        Test
+          q
+          (_DirectAnswer # a)
+          Nothing
+          (m ..~ selfmade_meta ...~ bak_meta)
       itest' ::
         s
         -> s
         -> Test TestMeta s
-      itest' q a = 
-        Test
-          q
-          (_DirectAnswer # a)
-          Nothing
-          (selfmade_meta ..~ instruments_meta ...~ bak_meta)
+      itest' = 
+        xtest' instruments_meta
       atest' ::
         s
         -> s
         -> Test TestMeta s
-      atest' q a = 
-        Test
-          q
-          (_DirectAnswer # a)
-          Nothing
-          (selfmade_meta ..~ air_speeds_meta ...~ bak_meta)
+      atest' = 
+        xtest' air_speeds_meta
       lgtest' ::
         s
         -> s
         -> Test TestMeta s
-      lgtest' q a = 
-        Test
-          q
-          (_DirectAnswer # a)
-          Nothing
-          (selfmade_meta ..~ light_gun_signals_meta ...~ bak_meta)
+      lgtest' = 
+        xtest' light_gun_signals_meta
+      mettest' ::
+        s
+        -> s
+        -> Test TestMeta s
+      mettest' = 
+        xtest' meteorology_meta
       rpltest'' ::
         s
         -> [s]
@@ -787,17 +794,45 @@ tests =
             "Return to starting point on aerodrome."
           ]
 -- END light gun signals, self-made
-
-{-
-SKC, 0 oktas, zero cloud cover
-FEW, 1-2 oktas, up to 2/8 cloud cover
-SCT, 3-4 oktas, up to 4/8 cloud cover
-BKN, 5-7 oktas, up to 7/8 cloud cover
-OVC, 8 oktas, 8/8 cloud cover
-NSC
-
--}
-
+        , str'
+          [
+            "What is the meaning of SKC?"
+            `mettest'`
+            "SKy Clear, 0 oktas, zero cloud cover"
+          , "What is the meaning of FEW?"
+            `mettest'`
+            "Few, 1-2 oktas, up to 2/8 cloud cover"
+          , "What is the meaning of SCT?"
+            `mettest'`
+            "Scattered, 3-4 oktas, up to 4/8 cloud cover"
+          , "What is the meaning of BKN?"
+            `mettest'`
+            "Broken, 5-7 oktas, up to 7/8 cloud cover"
+          , "What is the meaning of OVC?"
+            `mettest'`
+            "Overcast, 8 oktas, 8/8 cloud cover"
+          , "What is the meaning of NSC?"
+            `mettest'`
+            "Nil Significant Cloud"
+          , "What denotes 0 oktas?"
+            `mettest'`
+            "SKC"
+          , "What denotes 1-2 oktas?"
+            `mettest'`
+            "FEW"
+          , "What denotes 3-4 oktas?"
+            `mettest'`
+            "SCT"
+          , "What denotes 5-7 oktas?"
+            `mettest'`
+            "BKN"
+          , "What denotes 8 oktas?"
+            `mettest'`
+            "OVC"
+          , "What denotes Nil Significant Cloud?"
+            `mettest'`
+            "NSC"
+          ]
       ]
 
 -- TODO
