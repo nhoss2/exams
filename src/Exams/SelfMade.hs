@@ -787,10 +787,22 @@ tests =
             "Return to starting point on aerodrome."
           ]
 -- END light gun signals, self-made
+
+{-
+SKC, 0 oktas, zero cloud cover
+FEW, 1-2 oktas, up to 2/8 cloud cover
+SCT, 3-4 oktas, up to 4/8 cloud cover
+BKN, 5-7 oktas, up to 7/8 cloud cover
+OVC, 8 oktas, 8/8 cloud cover
+NSC
+
+-}
+
       ]
 
 -- TODO
 -- * Meteorology self-made
+-- * Morse code self-made
 -- * Dyson Holland exams
 -- * Bob Tait RPL
 -- * ATC BAK chapters
