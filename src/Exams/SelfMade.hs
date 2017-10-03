@@ -992,5 +992,6 @@ tests =
 -- * Curtis Aviation trial exams
 -- * Bob Tait RPL
 -- * ATC BAK chapters
--- * Bob Tait Chapters
+-- * Bob Tait chapters
+-- * Dyson Holland PPL Sample Exam 2+
 -- "computing TAS"
