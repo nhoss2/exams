@@ -994,4 +994,5 @@ tests =
 -- * ATC BAK chapters
 -- * Bob Tait chapters
 -- * Dyson Holland PPL Sample Exam 2+
--- "computing TAS"
+-- * Flight Computer https://www.youtube.com/channel/UCbleXbytPufvlWhfZOVQFGw
+--   * "computing TAS"
